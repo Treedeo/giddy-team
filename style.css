@@ -61,9 +61,8 @@ h1 {
     cursor: pointer;
 }
 .pagination-container {
-    margin-top: -10px; /* Убираем предыдущий сдвиг */
     position: relative;
-    top: -30px; /* Сдвиг вверх на 30px */
+    top: 20px; /* Сдвиг вниз на 20px */
 }
 .swiper-pagination {
     display: flex;
