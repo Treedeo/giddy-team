@@ -60,11 +60,6 @@ h1 {
     font-size: 24px;
     cursor: pointer;
 }
-.swiper-pagination {
-    margin: 20px 0; /* Расположение между блоком с квадратами и 5% */
-    position: relative;
-    top: -50px; /* Сдвиг вверх на 50px */
-}
 .control {
     display: flex;
     align-items: center;
@@ -119,10 +114,4 @@ footer {
 footer p {
     font-size: 14px;
     color: #333;
-}
-.swiper-pagination-bullet {
-    background: #bbb;
-}
-.swiper-pagination-bullet-active {
-    background: #333;
 }
