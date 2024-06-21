@@ -117,3 +117,12 @@ footer p {
 .swiper-pagination-bullet-active {
     background: #333;
 }
+.second-slide {
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+    transform: translateX(100%);
+}
+.swiper-slide-active.second-slide {
+    opacity: 1;
+    transform: translateX(0);
+}
