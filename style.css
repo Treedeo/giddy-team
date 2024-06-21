@@ -60,9 +60,9 @@ h1 {
 .control {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 20px;
-    padding: 0 10px; /* Смещаем кнопки со стрелками внутрь на 10% */
+    position: relative;
 }
 .arrow {
     background: none;
@@ -75,6 +75,14 @@ h1 {
     align-items: center;
     cursor: pointer;
 }
+.arrow.left {
+    left: 0;
+    margin-right: 10px; /* Уменьшено расстояние между кнопкой и 5% */
+}
+.arrow.right {
+    right: 0;
+    margin-left: 10px; /* Уменьшено расстояние между кнопкой и 5% */
+}
 .arrow-icon {
     font-size: 24px;
     color: black;
@@ -83,7 +91,7 @@ h1 {
 }
 .percent {
     font-size: 38.08px; /* Увеличено на 15% от 33.12px */
-    margin: 0 20px; /* Центрируем надпись */
+    margin: 0 10px; /* Центрируем надпись */
 }
 .submit {
     margin-top: 20px;
