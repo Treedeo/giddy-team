@@ -8,7 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     background-color: #fff;
     overflow: hidden; /* Убираем скроллинг */
 }
@@ -16,7 +16,6 @@ body {
     width: 390px; /* Ширина контейнера */
     text-align: center;
     position: relative;
-    transform-origin: top left;
 }
 header {
     margin-top: 10px; /* Расстояние от верхнего края экрана */
@@ -149,15 +148,5 @@ footer p {
     .submit {
         margin-top: 35px; /* Опускаем кнопку еще на 15px */
         position: relative;
-    }
-}
-
-/* Масштабирование для настольных версий */
-@media (min-width: 768px) {
-    html {
-        transform: scale(calc(100vw / 390));
-        transform-origin: top left;
-        height: calc(390vh / 100vw);
-        overflow: hidden;
     }
 }
