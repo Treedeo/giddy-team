@@ -48,20 +48,6 @@ h1 {
     font-size: 24px;
     cursor: pointer;
 }
-.pagination {
-    margin-bottom: 20px;
-}
-.dot {
-    height: 10px;
-    width: 10px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 0 5px;
-}
-.dot.active {
-    background-color: #333;
-}
 .control {
     display: flex;
     align-items: center;
@@ -116,4 +102,10 @@ footer {
 footer p {
     font-size: 14px;
     color: #333;
+}
+.swiper-pagination-bullet {
+    background: #bbb;
+}
+.swiper-pagination-bullet-active {
+    background: #333;
 }
