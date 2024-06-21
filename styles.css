@@ -10,41 +10,44 @@ body {
 
 .container {
     text-align: center;
-    width: 90%; /* Чуть меньше ширины, чтобы обеспечить отступы по бокам */
+    max-width: 960px; /* Ограничение ширины контейнера для удобства управления размерами элементов */
+    width: 100%;
+    padding: 20px; /* Добавим паддинг для отступов внутри контейнера */
 }
 
 header h1 {
     font-size: 24px;
-    margin: 20px 0; /* Отступ сверху и снизу */
+    margin-bottom: 20px; /* Отступ от заголовка до контента */
 }
 
 .gallery {
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Распределение элементов с равными отступами */
+    overflow: hidden; /* Скрываем элементы, выходящие за пределы */
 }
 
 .slide {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    flex-shrink: 0;
-    scroll-snap-align: start;
-    width: 100%; /* Заполняет весь доступный горизонтальный пространство */
-    padding: 20px 0; /* Паддинг сверху и снизу для каждого слайда */
+    width: 300%; /* Разрешаем слайду быть в три раза шире видимой области, для трёх страниц */
+    transform: translateX(0); /* Начальное положение */
+    transition: transform 0.3s ease-out; /* Плавная анимация переключения */
 }
 
 .logo {
-    width: 30%; /* Процентное значение для трех логотипов в одном ряду */
-    height: 100px;
-    margin: 10px; /* Отступы между логотипами */
-    border: 2px solid black;
-    border-radius: 15px; /* Скругленные углы */
+    flex: 1 0 30%; /* Занимает ровно треть ряда, учитывая отступы */
+    margin: 5px;
+    height: calc(30vw - 10px); /* Высота равна ширине, адаптивно */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
-    cursor: pointer; /* Курсор в виде указателя, показывающий, что логотипы кликабельны */
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 15px; /* Скруглённые углы */
+    cursor: pointer;
+    background-size: cover; /* Фон подгоняется под размер контейнера */
+    background-position: center;
 }
 
 .pagination {
