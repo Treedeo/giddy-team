@@ -62,7 +62,7 @@ h1 {
 }
 .pagination-container {
     position: relative;
-    top: 20px; /* Сдвиг вниз на 20px */
+    top: 25px; /* Сдвиг вниз на 25px */
 }
 .swiper-pagination {
     display: flex;
