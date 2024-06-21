@@ -27,7 +27,7 @@ h1 {
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5px; /* Расстояние между квадратами по горизонтали и вертикали */
+    gap: 5px; /* Расстояние между квадратами по горизонтали и вертикали */
     margin-bottom: 20px;
 }
 .tile {
@@ -42,6 +42,7 @@ h1 {
     align-items: center;
     font-size: 24px;
     cursor: pointer;
+    margin: 2.5px; /* Устанавливаем одинаковый отступ между всеми квадратами */
 }
 .pagination {
     margin-bottom: 20px;
