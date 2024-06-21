@@ -13,8 +13,7 @@ body {
     overflow-x: hidden;
 }
 .container {
-    max-width: 390px; /* Максимальная ширина контейнера */
-    width: 100%;
+    width: 390px; /* Ширина контейнера */
     text-align: center;
     position: relative;
 }
@@ -49,8 +48,8 @@ h1 {
     margin-bottom: 20px;
 }
 .tile {
-    width: 100%; /* Квадраты будут адаптироваться по ширине */
-    padding-bottom: 100%; /* Соотношение сторон 1:1 */
+    width: 120px; /* Размер квадрата */
+    height: 120px; /* Размер квадрата */
     background-color: #fff;
     color: black;
     border-radius: 20px;
@@ -60,10 +59,6 @@ h1 {
     align-items: center;
     font-size: 24px;
     cursor: pointer;
-    position: relative;
-}
-.tile span {
-    position: absolute;
 }
 .pagination-container {
     position: relative;
@@ -144,6 +139,8 @@ footer p {
         padding-top: 20px; /* Сдвигаем весь дизайн на 20px вверх */
     }
     .container {
-        padding: 0 10px; /* Убираем отступы */
+        width: 100%; /* Ширина контейнера на 100% */
+        max-width: 390px; /* Максимальная ширина контейнера */
+        margin: 0 10px; /* Убираем отступы */
     }
 }
