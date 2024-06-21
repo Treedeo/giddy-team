@@ -54,7 +54,7 @@ h1 {
     cursor: pointer;
 }
 .swiper-pagination {
-    margin-bottom: 20px; /* Между квадратами и 5% */
+    margin: 20px 0; /* Расположение между блоком с квадратами и 5% */
 }
 .control {
     display: flex;
