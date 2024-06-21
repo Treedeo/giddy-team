@@ -86,14 +86,14 @@ header {
     height: 40px; /* Высота контейнера */
     border: 1px solid black; /* Граница для визуализации */
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .swiper-pagination {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%; /* Высота должна быть равна высоте контейнера */
-    transform: translateY(15px); /* Смещение вниз на 15px (предыдущее смещение + дополнительное) */
 }
 .swiper-pagination-bullet {
     background: gray !important; /* Серый цвет для пассивной точки навигации */
