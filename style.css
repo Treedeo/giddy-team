@@ -27,12 +27,12 @@ h1 {
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 4px; /* Расстояние между квадратами по горизонтали и вертикали */
+    gap: 5px; /* Расстояние между квадратами по горизонтали и вертикали */
     margin-bottom: 20px;
 }
 .tile {
-    width: calc(33.33% - 8px); /* Обеспечить учет расстояния между квадратами */
-    height: 124px; /* Уменьшено на 10% от 138px */
+    width: calc((100% - 10px) / 3); /* Обеспечить учет расстояния между квадратами */
+    height: calc((100% - 10px) / 3); /* Сделать квадраты квадратными */
     background-color: #fff;
     color: black;
     border-radius: 20px;
