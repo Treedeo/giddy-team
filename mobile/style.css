@@ -18,7 +18,8 @@ body {
     text-align: center;
     position: relative;
     padding: 10px;
-    margin: 0 auto; /* Центрируем контейнер по горизонтали */
+    transform: scale(1.1); /* Увеличиваем дизайн на 10% */
+    transform-origin: center top; /* Центрируем трансформацию */
 }
 header {
     margin-top: 10px; /* Расстояние от верхнего края экрана */
@@ -52,8 +53,8 @@ h1 {
     margin-bottom: 20px; /* Увеличено для мобильных устройств */
 }
 .tile {
-    width: 121px; /* Увеличено на 10% от предыдущего значения */
-    height: 121px; /* Увеличено на 10% от предыдущего значения */
+    width: 132px; /* Увеличено на 10% от предыдущего значения */
+    height: 132px; /* Увеличено на 10% от предыдущего значения */
     background-color: #fff;
     color: black;
     border-radius: 15px; /* Радиус углов для мобильных устройств */
