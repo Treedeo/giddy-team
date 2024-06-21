@@ -85,20 +85,15 @@ header {
     align-items: center;
     height: 40px; /* Высота контейнера */
     border: 1px solid black; /* Граница для визуализации */
-    position: relative;
 }
 .swiper-pagination {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 .swiper-pagination-bullet {
-    background: red; /* Красный цвет для точек навигации */
+    background: gray; /* Серый цвет для пассивной точки навигации */
 }
 .swiper-pagination-bullet-active {
-    background: red; /* Красный цвет для активной точки навигации */
+    background: black; /* Черный цвет для активной точки навигации */
 }
