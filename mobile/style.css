@@ -76,7 +76,14 @@ header {
     font-size: 20px;
     border-radius: 10px; /* Скругленные края */
 }
-/* Стили для пагинации Swiper */
+.pagination-container {
+    margin-top: 20px; /* Отступ от зеленого контейнера */
+    background-color: pink; /* Розовый цвет контейнера */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .swiper-pagination-bullet {
     background: #000;
 }
