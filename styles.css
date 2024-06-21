@@ -6,36 +6,38 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f5f5f5;
-    padding-top: 0; /* Убрать верхний отступ */
+    padding-top: 0;
 }
 
 .container {
     text-align: center;
-    position: relative;
-    top: 20px; /* Отступ от верхнего края экрана */
 }
 
 header h1 {
     font-size: 24px;
-    margin-bottom: 24px; /* Поддержание расстояния после увеличения */
+    margin: 5px 0 24px 0; /* Отступ сверху 5px */
 }
 
 .logo-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 11.5px; /* Увеличенный радиус скрепления квадратов на 15% */
-    margin-bottom: 16px; /* Компенсация за поднятие всего контента */
+    gap: 11.5px; /* Расстояние между квадратами */
+    margin-bottom: 16px;
 }
 
 .logo {
     width: 110px;
     height: 110px;
     border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 11.5px; /* Скругление углов увеличено на 15% */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
+}
+
+.logo#logo1 {
+    background-color: red; /* Первый квадрат покрашен в красный */
 }
 
 .pagination {
@@ -58,18 +60,18 @@ header h1 {
 }
 
 .arrow-button {
-    font-size: 24px; /* размер шрифта для внутренних стрелок */
-    border: 2px solid black; /* граница кнопки */
-    border-radius: 50%; /* радиус границы для круглой формы */
-    width: 40px; /* ширина кнопки */
-    height: 40px; /* высота кнопки, равная ширине для круглой формы */
+    font-size: 24px;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 36.125px;
+    height: 36.125px;
     display: flex;
     justify-content: center;
     align-items: center;
     background: none;
     cursor: pointer;
-    color: black; /* цвет стрелок */
-    margin: 0 5px; /* отступы вокруг кнопки */
+    color: black;
+    margin: 0 5px;
 }
 
 .discount-controls {
@@ -81,7 +83,7 @@ header h1 {
 
 #discount {
     margin: 0 10px;
-    font-size: 30.36px; /* Увеличен шрифт на 10% */
+    font-size: 30.36px;
 }
 
 .price {
@@ -106,5 +108,5 @@ header h1 {
     color: black;
     margin-top: 5px;
     display: block;
-    content: "v.0005"; /* Обновлен номер версии */
+    content: "v.0007"; /* Обновлен номер версии */
 }
