@@ -13,7 +13,6 @@ window.addEventListener('resize', adjustContainerSize);
 function adjustContainerSize() {
     const container = document.querySelector('.container');
     const paginationContainer = document.querySelector('.pagination-container');
-    const swiperPagination = document.querySelector('.swiper-pagination');
 
     const width = window.innerWidth;
     const height = window.innerHeight;
@@ -23,7 +22,7 @@ function adjustContainerSize() {
 
     // Центрирование точек навигации в контейнере
     const paginationHeight = paginationContainer.offsetHeight;
-    swiperPagination.style.top = `${paginationHeight / 2}px`;
+    paginationContainer.style.lineHeight = `${paginationHeight}px`; // Центрирование по вертикали
 }
 
 // Изначальная настройка контейнера при загрузке страницы
