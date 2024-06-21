@@ -10,43 +10,43 @@ body {
 
 .container {
     text-align: center;
-    max-width: 960px; /* Ограничение ширины контейнера для удобства управления размерами элементов */
+    max-width: 960px; /* Ограничиваем максимальную ширину контейнера */
     width: 100%;
-    padding: 20px; /* Добавим паддинг для отступов внутри контейнера */
+    margin: 0 auto; /* Центрирование контейнера */
 }
 
 header h1 {
     font-size: 24px;
-    margin-bottom: 20px; /* Отступ от заголовка до контента */
+    margin: 20px 0; /* Отступ сверху и снизу */
 }
 
 .gallery {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; /* Распределение элементов с равными отступами */
-    overflow: hidden; /* Скрываем элементы, выходящие за пределы */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .slide {
     display: flex;
     flex-wrap: wrap;
-    width: 300%; /* Разрешаем слайду быть в три раза шире видимой области, для трёх страниц */
-    transform: translateX(0); /* Начальное положение */
-    transition: transform 0.3s ease-out; /* Плавная анимация переключения */
+    justify-content: space-around;
+    width: 100%; /* Каждый слайд занимает 100% ширины контейнера */
 }
 
 .logo {
-    flex: 1 0 30%; /* Занимает ровно треть ряда, учитывая отступы */
-    margin: 5px;
-    height: calc(30vw - 10px); /* Высота равна ширине, адаптивно */
+    flex-basis: calc(33.333% - 10px); /* Ширина каждого квадрата с учетом отступов */
+    height: calc((100vw / 3) - 10px); /* Высота, соответствующая ширине */
+    margin: 5px; /* Отступы вокруг квадратов */
+    border: 2px solid black;
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 16px;
-    border: 2px solid black;
-    border-radius: 15px; /* Скруглённые углы */
     cursor: pointer;
-    background-size: cover; /* Фон подгоняется под размер контейнера */
+    background-size: cover;
     background-position: center;
 }
 
@@ -97,6 +97,6 @@ header h1 {
     padding: 10px 20px;
     cursor: pointer;
     display: block;
-    margin: 20px auto; /* Центрирование кнопки */
+    margin: 20px auto;
     text-align: center;
 }
