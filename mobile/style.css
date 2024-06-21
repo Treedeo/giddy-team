@@ -86,11 +86,9 @@ header {
     align-items: center;
     border: 1px solid black; /* Граница для визуализации */
     position: relative;
+    top: -10px; /* Смещение контейнера вверх на 10px */
 }
 .swiper-pagination {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) translateY(-10px); /* Смещение вверх на 10px */
     display: flex;
     justify-content: center;
     align-items: center;
