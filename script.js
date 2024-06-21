@@ -4,6 +4,18 @@ document.addEventListener('DOMContentLoaded', function() {
             el: '.swiper-pagination',
             clickable: true,
         },
+        on: {
+            slideChangeTransitionStart: function() {
+                const slides = document.querySelectorAll('.swiper-slide');
+                slides.forEach((slide) => {
+                    if (slide.classList.contains('swiper-slide-active')) {
+                        slide.classList.add('second-slide');
+                    } else {
+                        slide.classList.remove('second-slide');
+                    }
+                });
+            },
+        },
     });
 });
 
