@@ -1,60 +1,52 @@
-const logos = document.querySelectorAll('.logo');
-const dots = document.querySelectorAll('.dot');
-const discountDisplay = document.getElementById('discount');
-const priceDisplay = document.getElementById('price');
-const prevButton = document.getElementById('prev');
-const nextButton = document.getElementById('next');
-const companyButton = document.getElementById('company-button');
+document.addEventListener("DOMContentLoaded", function() {
+    const gallery = document.querySelector('.gallery');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
 
-let currentLogoGroup = 0;
-let currentDiscountIndex = 0;
-const discounts = [
-    { percent: '5%', price: '10 COM' },
-    { percent: '10%', price: '20 COM' },
-    { percent: '15%', price: '30 COM' },
-];
-
-function updateDiscount() {
-    discountDisplay.textContent = discounts[currentDiscountIndex].percent;
-    priceDisplay.textContent = discounts[currentDiscountIndex].price;
-}
-
-function swipeLogos(direction) {
-    if (direction === 'next') {
-        currentLogoGroup = (currentLogoGroup + 1) % dots.length; // Assuming dots.length groups
-    } else if (direction === 'prev') {
-        currentLogoGroup = (currentLogoGroup - 1 + dots.length) % dots.length; // Assuming dots.length groups
-    }
-    updateDots();
-}
-
-function updateDots() {
-    dots.forEach((dot, index) => {
-        dot.className = index === currentLogoGroup ? 'dot active' : 'dot';
+    // Настройка событий для мыши
+    gallery.addEventListener('mousedown', (e) => {
+        isDown = true;
+        gallery.classList.add('active');
+        startX = e.pageX - gallery.offsetLeft;
+        scrollLeft = gallery.scrollLeft;
     });
-}
 
-prevButton.addEventListener('click', () => {
-    swipeLogos('prev');
-    currentDiscountIndex = (currentDiscountIndex - 1 + discounts.length) % discounts.length;
-    updateDiscount();
+    gallery.addEventListener('mouseleave', () => {
+        isDown = false;
+        gallery.classList.remove('active');
+    });
+
+    gallery.addEventListener('mouseup', () => {
+        isDown = false;
+        gallery.classList.remove('active');
+    });
+
+    gallery.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - gallery.offsetLeft;
+        const walk = (x - startX) * 3; // Умножаем на 3 для увеличения скорости скроллинга
+        gallery.scrollLeft = scrollLeft - walk;
+    });
+
+    // Настройка событий для тачскринов
+    gallery.addEventListener('touchstart', (e) => {
+        isDown = true;
+        gallery.classList.add('active');
+        startX = e.touches[0].pageX - gallery.offsetLeft;
+        scrollLeft = gallery.scrollLeft;
+    }, {passive: true});
+
+    gallery.addEventListener('touchend', () => {
+        isDown = false;
+        gallery.classList.remove('active');
+    });
+
+    gallery.addEventListener('touchmove', (e) => {
+        if (!isDown) return;
+        const x = e.touches[0].pageX - gallery.offsetLeft;
+        const walk = (x - startX) * 3; // Умножаем на 3 для увеличения скорости скроллинга
+        gallery.scrollLeft = scrollLeft - walk;
+    }, {passive: true});
 });
-
-nextButton.addEventListener('click', () => {
-    swipeLogos('next');
-    currentDiscountIndex = (currentDiscountIndex + 1) % discounts.length;
-    updateDiscount();
-});
-
-companyButton.addEventListener('click', () => {
-    // Logic to go back to the main menu
-    // Placeholder for returning to the main logo group and resetting discounts
-    currentLogoGroup = 0;
-    currentDiscountIndex = 0;
-    updateDots();
-    updateDiscount();
-});
-
-// Initial setup
-updateDots();
-updateDiscount();
