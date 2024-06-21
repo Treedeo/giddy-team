@@ -12,7 +12,7 @@ body {
     background-color: #fff;
 }
 .container {
-    width: 390px; /* Увеличено на 15px */
+    width: 450px; /* Увеличено на 20% */
     text-align: center;
     position: relative;
 }
@@ -31,8 +31,8 @@ h1 {
     margin-bottom: 20px;
 }
 .tile {
-    width: 115px; /* Увеличено на 15px */
-    height: 115px; /* Увеличено на 15px */
+    width: 138px; /* Увеличено на 20% от 115px */
+    height: 138px; /* Увеличено на 20% от 115px */
     background-color: #fff;
     color: black;
     border-radius: 20px;
@@ -74,15 +74,20 @@ h1 {
     align-items: center;
     cursor: pointer;
 }
+.arrow-icon {
+    color: black;
+    font-size: 24px;
+}
 .percent {
     font-size: 28.8px; /* Увеличено на 20% */
     margin: 0 10px;
 }
 .submit {
     margin-top: 20px;
+    position: relative;
 }
 .submit-btn {
-    padding: 12px 24px; /* Увеличено на 20% */
+    padding: 12px 50px; /* Увеличено для соответствия внешним краям круглых кнопок */
     background-color: #000;
     color: white;
     border: none;
@@ -91,10 +96,7 @@ h1 {
     cursor: pointer;
 }
 footer {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
+    margin-top: 10px;
 }
 footer p {
     font-size: 14px;
