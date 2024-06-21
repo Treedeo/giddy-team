@@ -86,6 +86,11 @@ header {
     height: 40px; /* Высота контейнера */
     border: 1px solid black; /* Граница для визуализации */
 }
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .swiper-pagination-bullet {
     background: #000;
 }
