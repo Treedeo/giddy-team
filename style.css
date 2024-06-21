@@ -14,10 +14,9 @@ body {
 }
 .container {
     width: 390px; /* Ширина контейнера */
-    height: 100vh; /* Высота контейнера равна высоте экрана */
     text-align: center;
     position: relative;
-    transform-origin: top left;
+    transform-origin: top center;
 }
 header {
     margin-top: 10px; /* Расстояние от верхнего края экрана */
@@ -137,16 +136,6 @@ footer p {
 
 /* Адаптивный дизайн для телефонов */
 @media (max-width: 767px) {
-    body {
-        padding-top: 20px; /* Сдвигаем весь дизайн на 20px вверх */
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .container {
-        width: 100%; /* Ширина контейнера на 100% */
-        max-width: 390px; /* Максимальная ширина контейнера */
-        margin: 0 10px; /* Убираем отступы */
-    }
     .submit {
         margin-top: 35px; /* Опускаем кнопку еще на 15px */
         position: relative;
