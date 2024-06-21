@@ -25,6 +25,10 @@ h1 {
     font-size: 24px;
     margin-bottom: 20px;
 }
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -78,10 +82,10 @@ h1 {
     position: absolute;
 }
 .arrow.left {
-    left: 80px; /* Смещаем кнопку влево еще на 20px */
+    left: 80px; /* Смещаем кнопку влево */
 }
 .arrow.right {
-    right: 80px; /* Смещаем кнопку вправо еще на 20px */
+    right: 80px; /* Смещаем кнопку вправо */
 }
 .arrow-icon {
     font-size: 24px;
