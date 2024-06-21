@@ -13,7 +13,7 @@ body {
     overflow-x: hidden;
 }
 .container {
-    width: 390px; /* Ширина контейнера */
+    width: 390px; /* Ширина контейнера для десктопа */
     text-align: center;
     position: relative;
 }
@@ -135,12 +135,13 @@ footer p {
 
 /* Адаптивный дизайн для телефонов */
 @media (max-width: 767px) {
-    body {
-        padding-top: 20px; /* Сдвигаем весь дизайн на 20px вверх */
-    }
     .container {
         width: 100%; /* Ширина контейнера на 100% */
         max-width: 390px; /* Максимальная ширина контейнера */
-        margin: 0 10px; /* Убираем отступы */
+        margin: 0 auto; /* Центрируем контейнер */
+    }
+    .gallery .tile {
+        width: calc((100% - 10px) / 3); /* Размер квадрата с учетом отступов */
+        height: calc((100% - 10px) / 3); /* Размер квадрата с учетом отступов */
     }
 }
