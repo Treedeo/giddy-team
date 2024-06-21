@@ -5,22 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giddy Team</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
     <div class="container">
         <header>
             <h1>GIDDY.TEAM</h1>
         </header>
-        <div class="gallery">
-            <div class="tile" id="tile1">1</div>
-            <div class="tile" id="tile2">2</div>
-            <div class="tile" id="tile3">3</div>
-            <div class="tile" id="tile4">4</div>
-            <div class="tile" id="tile5">5</div>
-            <div class="tile" id="tile6">6</div>
-            <div class="tile" id="tile7">7</div>
-            <div class="tile" id="tile8">8</div>
-            <div class="tile" id="tile9">9</div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="gallery">
+                        <div class="tile" id="tile1">1</div>
+                        <div class="tile" id="tile2">2</div>
+                        <div class="tile" id="tile3">3</div>
+                        <div class="tile" id="tile4">4</div>
+                        <div class="tile" id="tile5">5</div>
+                        <div class="tile" id="tile6">6</div>
+                        <div class="tile" id="tile7">7</div>
+                        <div class="tile" id="tile8">8</div>
+                        <div class="tile" id="tile9">9</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="gallery">
+                        <div class="tile" id="tile10">10</div>
+                        <div class="tile" id="tile11">11</div>
+                        <div class="tile" id="tile12">12</div>
+                        <div class="tile" id="tile13">13</div>
+                        <div class="tile" id="tile14">14</div>
+                        <div class="tile" id="tile15">15</div>
+                        <div class="tile" id="tile16">16</div>
+                        <div class="tile" id="tile17">17</div>
+                        <div class="tile" id="tile18">18</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
         </div>
         <div class="pagination">
             <span class="dot active"></span>
@@ -40,6 +62,7 @@
             <p>V-002</p>
         </footer>
     </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
