@@ -60,10 +60,12 @@ h1 {
     font-size: 24px;
     cursor: pointer;
 }
-.swiper-pagination {
+.pagination-container {
     margin-bottom: 20px; /* Размещение под блоком с квадратами */
-    position: relative;
-    top: 20px; /* Сдвиг вниз для размещения под блоком с квадратами */
+}
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
 }
 .control {
     display: flex;
