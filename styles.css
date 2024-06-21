@@ -9,16 +9,17 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #fff;
 }
 .container {
-    width: 80%;
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 375px;
     text-align: center;
 }
+header {
+    margin-bottom: 20px;
+}
 h1 {
+    font-size: 24px;
     margin-bottom: 20px;
 }
 .gallery {
@@ -28,10 +29,15 @@ h1 {
     margin-bottom: 20px;
 }
 .tile {
-    padding: 20px;
+    width: 100px;
+    height: 100px;
     background-color: #003366;
     color: white;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
 }
 .pagination {
     margin-bottom: 20px;
@@ -48,6 +54,9 @@ h1 {
     background-color: #333;
 }
 .control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 20px;
 }
 .arrow, .percent {
@@ -58,9 +67,12 @@ h1 {
     background: none;
     border: none;
 }
+.submit {
+    margin-top: 20px;
+}
 .submit-btn {
     padding: 10px 20px;
-    background-color: #0066cc;
+    background-color: #000;
     color: white;
     border: none;
     border-radius: 5px;
