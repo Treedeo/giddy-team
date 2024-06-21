@@ -60,9 +60,8 @@ h1 {
 .control {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     margin-bottom: 20px;
-    padding: 0 4%; /* Смещаем кнопки со стрелками ближе к центру на 4% */
     position: relative;
 }
 .arrow {
@@ -75,6 +74,12 @@ h1 {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+.arrow.left {
+    left: 10px; /* Смещаем кнопку влево на 10px */
+}
+.arrow.right {
+    right: 10px; /* Смещаем кнопку вправо на 10px */
 }
 .arrow-icon {
     font-size: 24px;
