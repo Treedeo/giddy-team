@@ -21,28 +21,40 @@ function updateDiscount() {
 
 function swipeLogos(direction) {
     if (direction === 'next') {
-        currentLogoGroup = (currentLogoGroup + 1) % 4; // Assuming 4 groups
-    } else {
-        currentLogoGroup = (currentLogoGroup - 1 + 4) % 4; // Assuming 4 groups
+        currentLogoGroup = (currentLogoGroup + 1) % dots.length; // Assuming dots.length groups
+    } else if (direction === 'prev') {
+        currentLogoGroup = (currentLogoGroup - 1 + dots.length) % dots.length; // Assuming dots.length groups
     }
+    updateDots();
+}
+
+function updateDots() {
     dots.forEach((dot, index) => {
-        dot.style.backgroundColor = index === currentLogoGroup ? 'black' : 'gray';
+        dot.className = index === currentLogoGroup ? 'dot active' : 'dot';
     });
-    // Update logos visibility based on the currentLogoGroup
 }
 
 prevButton.addEventListener('click', () => {
+    swipeLogos('prev');
     currentDiscountIndex = (currentDiscountIndex - 1 + discounts.length) % discounts.length;
     updateDiscount();
 });
 
 nextButton.addEventListener('click', () => {
+    swipeLogos('next');
     currentDiscountIndex = (currentDiscountIndex + 1) % discounts.length;
     updateDiscount();
 });
 
 companyButton.addEventListener('click', () => {
     // Logic to go back to the main menu
+    // Placeholder for returning to the main logo group and resetting discounts
+    currentLogoGroup = 0;
+    currentDiscountIndex = 0;
+    updateDots();
+    updateDiscount();
 });
 
+// Initial setup
+updateDots();
 updateDiscount();
