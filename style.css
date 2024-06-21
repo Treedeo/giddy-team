@@ -27,7 +27,7 @@ h1 {
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3px; /* Расстояние между квадратами по горизонтали и вертикали */
+    gap: 4px; /* Расстояние между квадратами по горизонтали и вертикали */
     margin-bottom: 20px;
 }
 .tile {
@@ -60,7 +60,7 @@ h1 {
 .control {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 20px;
     position: relative;
 }
@@ -77,10 +77,10 @@ h1 {
     position: absolute;
 }
 .arrow.left {
-    left: 20px; /* Смещаем кнопку влево на 20px */
+    left: calc(10% + 20px); /* Смещаем кнопку влево на 10% и 20px */
 }
 .arrow.right {
-    right: 20px; /* Смещаем кнопку вправо на 20px */
+    right: calc(10% + 20px); /* Смещаем кнопку вправо на 10% и 20px */
 }
 .arrow-icon {
     font-size: 24px;
@@ -90,7 +90,7 @@ h1 {
 }
 .percent {
     font-size: 38.08px; /* Увеличено на 15% от 33.12px */
-    margin: 0 90px; /* Раздвинуть кнопки со стрелками */
+    margin: 0 72px; /* Центрируем надпись */
 }
 .submit {
     margin-top: 20px;
