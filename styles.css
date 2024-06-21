@@ -11,19 +11,20 @@ body {
 
 .container {
     text-align: center;
-    margin-top: -20%; /* Поднимаем весь дизайн выше на 20% */
+    position: relative;
+    top: 20px; /* Отступ от верхнего края экрана */
 }
 
 header h1 {
     font-size: 24px;
-    margin-bottom: 24px; /* Уменьшенное расстояние от надписи до квадратов */
+    margin-bottom: 24px; /* Поддержание расстояния после увеличения */
 }
 
 .logo-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-bottom: 16px; /* Уменьшено для компактности */
+    gap: 11.5px; /* Увеличенный радиус скрепления квадратов на 15% */
+    margin-bottom: 16px; /* Компенсация за поднятие всего контента */
 }
 
 .logo {
@@ -59,16 +60,16 @@ header h1 {
 .arrow-button {
     font-size: 24px;
     border: 2px solid black;
-    border-radius: 42.5px; /* Уменьшен радиус на 15% */
-    width: 42.5px; /* Уменьшены размеры для компактности */
-    height: 42.5px;
+    border-radius: 50%;
+    width: 36.125px; /* Уменьшен размер на 15% */
+    height: 36.125px;
     display: flex;
     justify-content: center;
     align-items: center;
     background: none;
     cursor: pointer;
     color: black;
-    margin: 0 5px; /* Добавлено для центрирования стрелок */
+    margin: 0 5px; /* Центрирование стрелок */
 }
 
 .discount-controls {
@@ -80,7 +81,7 @@ header h1 {
 
 #discount {
     margin: 0 10px;
-    font-size: 27.6px;
+    font-size: 30.36px; /* Увеличен шрифт на 10% */
 }
 
 .price {
@@ -105,5 +106,5 @@ header h1 {
     color: black;
     margin-top: 5px;
     display: block;
-    content: "v.003"; /* Обновлен номер версии */
+    content: "v.0005"; /* Обновлен номер версии */
 }
