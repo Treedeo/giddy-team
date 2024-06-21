@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     const swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
         on: {
             slideChangeTransitionStart: function() {
                 const slides = document.querySelectorAll('.swiper-slide');
