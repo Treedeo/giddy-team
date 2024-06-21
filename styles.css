@@ -31,14 +31,15 @@ h1 {
 .tile {
     width: 100px;
     height: 100px;
-    background-color: #003366;
-    color: white;
+    background-color: #fff;
+    color: black;
     border-radius: 20px;
-    border: 2px solid black; /* Черная рамка */
+    border: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
+    cursor: pointer;
 }
 .pagination {
     margin-bottom: 20px;
@@ -67,6 +68,7 @@ h1 {
 .arrow {
     background: none;
     border: none;
+    cursor: pointer;
 }
 .submit {
     margin-top: 20px;
@@ -78,4 +80,5 @@ h1 {
     border: none;
     border-radius: 20px;
     font-size: 16px;
+    cursor: pointer;
 }
