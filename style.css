@@ -12,8 +12,7 @@ body {
     background-color: #fff;
 }
 .container {
-    width: 100%; /* Ширина контейнера */
-    max-width: 450px; /* Максимальная ширина */
+    width: 390px; /* Ширина контейнера */
     text-align: center;
     position: relative;
 }
@@ -29,7 +28,6 @@ h1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5px; /* Расстояние между квадратами по горизонтали и вертикали */
-    justify-content: center; /* Выровнять по центру */
     margin-bottom: 20px;
 }
 .tile {
@@ -46,8 +44,6 @@ h1 {
     cursor: pointer;
 }
 .pagination {
-    display: flex;
-    justify-content: center; /* Выровнять по центру */
     margin-bottom: 20px;
 }
 .dot {
@@ -64,7 +60,7 @@ h1 {
 .control {
     display: flex;
     align-items: center;
-    justify-content: center; /* Выровнять по центру */
+    justify-content: center;
     margin-bottom: 20px;
     position: relative;
 }
@@ -81,12 +77,10 @@ h1 {
     position: absolute;
 }
 .arrow.left {
-    left: 50%; /* Смещаем кнопку влево */
-    transform: translateX(-150px); /* Смещаем на 80px влево */
+    left: 80px; /* Смещаем кнопку влево еще на 20px */
 }
 .arrow.right {
-    right: 50%; /* Смещаем кнопку вправо */
-    transform: translateX(150px); /* Смещаем на 80px вправо */
+    right: 80px; /* Смещаем кнопку вправо еще на 20px */
 }
 .arrow-icon {
     font-size: 24px;
