@@ -1,91 +1,68 @@
-body {
-    font-family: 'Arial', sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f5f5f5;
+    background-color: #f0f0f0;
 }
-
 .container {
     width: 80%;
-    max-width: 1200px;
-}
-
-header h1 {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: center;
-    margin: 20px 0;
 }
-
+h1 {
+    margin-bottom: 20px;
+}
 .gallery {
-    display: flex;
-    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
 }
-
-.slide {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.logo {
-    width: 30%;
-    padding-bottom: 30%; /* Процентное соотношение для квадратов */
-    background-color: #007BFF;
+.tile {
+    padding: 20px;
+    background-color: #003366;
     color: white;
-    margin: 1.66%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 10px;
-    box-sizing: border-box; /* Гарантирует, что padding и border входят в ширину элемента */
 }
-
-.controls {
-    text-align: center;
-    margin-top: 20px;
+.pagination {
+    margin-bottom: 20px;
 }
-
-.pagination .dot {
-    display: inline-block;
-    width: 10px;
+.dot {
     height: 10px;
+    width: 10px;
+    background-color: #bbb;
     border-radius: 50%;
-    background-color: #ddd;
+    display: inline-block;
     margin: 0 5px;
-    cursor: pointer; /* Добавляем указатель для интерактивности */
 }
-
-.pagination .dot.active {
+.dot.active {
     background-color: #333;
 }
-
-.discount-controls, .price-button {
-    margin-top: 20px;
+.control {
+    margin-bottom: 20px;
 }
-
-.arrow-button {
-    background: none;
-    border: none;
+.arrow, .percent {
     font-size: 24px;
-    cursor: pointer;
-    padding: 5px 10px;
-}
-
-.discount-percent {
-    font-size: 20px;
     margin: 0 10px;
 }
-
-.price-button {
-    font-size: 18px;
-    color: white;
-    background-color: black;
+.arrow {
+    background: none;
     border: none;
-    border-radius: 10px;
+}
+.submit-btn {
     padding: 10px 20px;
-    cursor: pointer;
-    display: inline-block; /* Убираем block для более точного контроля над размерами */
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
 }
