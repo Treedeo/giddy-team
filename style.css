@@ -42,7 +42,6 @@ h1 {
     align-items: center;
     font-size: 24px;
     cursor: pointer;
-    margin: 2.5px; /* Устанавливаем одинаковый отступ между всеми квадратами */
 }
 .pagination {
     margin-bottom: 20px;
@@ -61,27 +60,20 @@ h1 {
 .control {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     margin-bottom: 20px;
-    position: relative;
+    padding: 0 10px; /* Смещаем кнопки со стрелками внутрь на 10% */
 }
 .arrow {
     background: none;
     border: 2px solid black;
     border-radius: 50%;
-    width: 36px; /* Уменьшено на 10% от 40px */
-    height: 36px; /* Уменьшено на 10% от 40px */
+    width: 32px; /* Уменьшено, чтобы соответствовать границам кнопки 10 COM */
+    height: 32px; /* Уменьшено, чтобы соответствовать границам кнопки 10 COM */
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    position: absolute;
-}
-.arrow.left {
-    left: calc(10% + 20px); /* Смещаем кнопку влево на 10% и 20px */
-}
-.arrow.right {
-    right: calc(10% + 20px); /* Смещаем кнопку вправо на 10% и 20px */
 }
 .arrow-icon {
     font-size: 24px;
@@ -91,7 +83,7 @@ h1 {
 }
 .percent {
     font-size: 38.08px; /* Увеличено на 15% от 33.12px */
-    margin: 0 72px; /* Центрируем надпись */
+    margin: 0 20px; /* Центрируем надпись */
 }
 .submit {
     margin-top: 20px;
