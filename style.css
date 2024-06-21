@@ -8,12 +8,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     background-color: #fff;
-    overflow-x: hidden;
+    padding-left: 10px; /* Сдвигаем весь дизайн на 10px влево */
 }
 .container {
-    width: 390px; /* Ширина контейнера для десктопа */
+    width: 390px; /* Ширина контейнера */
     text-align: center;
     position: relative;
 }
@@ -131,17 +131,4 @@ footer p {
 }
 .swiper-pagination-bullet-active {
     background: #333;
-}
-
-/* Адаптивный дизайн для телефонов */
-@media (max-width: 767px) {
-    .container {
-        width: 100%; /* Ширина контейнера на 100% */
-        max-width: 390px; /* Максимальная ширина контейнера */
-        margin: 0 auto; /* Центрируем контейнер */
-    }
-    .gallery .tile {
-        width: calc((100% - 10px) / 3); /* Размер квадрата с учетом отступов */
-        height: calc((100% - 10px) / 3); /* Размер квадрата с учетом отступов */
-    }
 }
