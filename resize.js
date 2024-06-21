@@ -6,10 +6,11 @@ function resizeContainer() {
     const scale = Math.min(scaleWidth, scaleHeight);
 
     container.style.transform = `scale(${scale})`;
-    container.style.transformOrigin = 'top left';
+    container.style.transformOrigin = 'top center';
 
-    // Adjust the container height to prevent overflow
-    container.style.height = `${container.offsetHeight * scale}px`;
+    // Center the container vertically
+    const marginTop = (body.clientHeight - container.offsetHeight * scale) / 2;
+    container.style.marginTop = `${marginTop}px`;
 }
 
 window.addEventListener('resize', resizeContainer);
