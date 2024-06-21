@@ -31,8 +31,8 @@ h1 {
     margin-bottom: 20px;
 }
 .tile {
-    width: calc((100% - 10px) / 3); /* Обеспечить учет расстояния между квадратами */
-    height: calc((100% - 10px) / 3); /* Сделать квадраты квадратными */
+    width: 124px; /* Размер квадрата */
+    height: 124px; /* Размер квадрата */
     background-color: #fff;
     color: black;
     border-radius: 20px;
