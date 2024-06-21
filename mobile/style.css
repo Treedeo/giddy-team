@@ -74,7 +74,7 @@ header {
     justify-content: center;
     align-items: center;
     font-size: 20px;
-    border-radius: 10px; /* Скругленные края */
+    border-radius: 12px; /* Скругленные края, увеличены на 20% */
 }
 .pagination-container {
     margin-top: 20px; /* Отступ от зеленого контейнера */
@@ -92,6 +92,7 @@ header {
     justify-content: center;
     align-items: center;
     transform: translateY(-10px); /* Смещение вверх на 10px */
+    position: absolute;
 }
 .swiper-pagination-bullet {
     background: gray !important; /* Серый цвет для пассивной точки навигации */
