@@ -8,14 +8,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #fff;
     overflow: hidden; /* Убираем скроллинг */
 }
 .container {
     width: 390px; /* Ширина контейнера */
+    height: 100vh; /* Высота контейнера равна высоте экрана */
     text-align: center;
     position: relative;
+    transform-origin: top left;
 }
 header {
     margin-top: 10px; /* Расстояние от верхнего края экрана */
