@@ -60,9 +60,10 @@ h1 {
 .control {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 20px;
-    padding: 0 3%; /* Смещаем кнопки со стрелками на 3% к краям */
+    padding: 0 4%; /* Смещаем кнопки со стрелками ближе к центру на 4% */
+    position: relative;
 }
 .arrow {
     background: none;
@@ -83,6 +84,7 @@ h1 {
 }
 .percent {
     font-size: 38.08px; /* Увеличено на 15% от 33.12px */
+    margin: 0 10px; /* Центрируем надпись */
 }
 .submit {
     margin-top: 20px;
@@ -92,7 +94,7 @@ h1 {
     padding: 12px 74px; /* Подогнано под внешние края стрелок */
     background-color: #fff;
     color: black;
-    border: 2px солид black;
+    border: 2px solid black; /* Восстанавливаем черную обводку */
     border-radius: 28.8px; /* Округлены края еще на 20% от 24px */
     font-size: 22.08px; /* Увеличено на 15% от 19.2px */
     cursor: pointer;
