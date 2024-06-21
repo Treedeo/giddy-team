@@ -91,6 +91,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translateY(-10px); /* Смещение вверх на 10px */
 }
 .swiper-pagination-bullet {
     background: gray !important; /* Серый цвет для пассивной точки навигации */
