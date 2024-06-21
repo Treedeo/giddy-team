@@ -61,13 +61,12 @@ h1 {
     cursor: pointer;
 }
 .pagination-container {
-    margin-bottom: 20px; /* Размещение под блоком с квадратами */
-    position: relative;
-    top: -100px; /* Сдвиг вверх на 100px */
+    margin-top: -10px; /* Сдвиг вверх на 10px */
 }
 .swiper-pagination {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px; /* Размещение под блоком с квадратами */
 }
 .control {
     display: flex;
