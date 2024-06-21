@@ -9,9 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 const slides = document.querySelectorAll('.swiper-slide');
                 slides.forEach((slide) => {
                     if (slide.classList.contains('swiper-slide-active')) {
-                        slide.classList.add('second-slide');
+                        slide.style.opacity = '1';
+                        slide.style.transform = 'translateX(0)';
                     } else {
-                        slide.classList.remove('second-slide');
+                        slide.style.opacity = '0';
+                        slide.style.transform = 'translateX(100%)';
                     }
                 });
             },
