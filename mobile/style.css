@@ -25,7 +25,22 @@ body {
     border: 2px solid red; /* Граница для основного контейнера */
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     background-color: #f9f9f9;
+}
+.header-container {
+    width: 100%;
+    height: 20px;
+    margin-top: 20px; /* Отступ от верхнего края */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow; /* Желтый цвет контейнера */
+    border: 1px solid black; /* Граница для визуализации */
+}
+header {
+    font-size: 16px;
+    font-weight: bold;
 }
