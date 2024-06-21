@@ -10,7 +10,6 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #fff;
-    padding-left: 10px; /* Сдвигаем весь дизайн на 10px влево */
 }
 .container {
     width: 390px; /* Ширина контейнера */
@@ -131,4 +130,11 @@ footer p {
 }
 .swiper-pagination-bullet-active {
     background: #333;
+}
+
+/* Адаптивный дизайн для телефонов */
+@media (max-width: 767px) {
+    body {
+        padding-top: 20px; /* Сдвигаем весь дизайн на 20px вверх */
+    }
 }
