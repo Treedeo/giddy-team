@@ -1,3 +1,12 @@
+// Инициализация Swiper
+const swiper = new Swiper('.swiper-container', {
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    loop: true,
+});
+
 // Скрипт для адаптации контейнера в зависимости от размера экрана
 window.addEventListener('resize', adjustContainerSize);
 
