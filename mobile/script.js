@@ -12,18 +12,11 @@ window.addEventListener('resize', adjustContainerSize);
 
 function adjustContainerSize() {
     const container = document.querySelector('.container');
-    const paginationContainer = document.querySelector('.pagination-container');
-
     const width = window.innerWidth;
     const height = window.innerHeight;
 
     container.style.width = `${width}px`;
     container.style.height = `${height}px`;
-
-    // Центрирование точек навигации в контейнере
-    paginationContainer.style.display = 'flex';
-    paginationContainer.style.justifyContent = 'center';
-    paginationContainer.style.alignItems = 'center';
 }
 
 // Изначальная настройка контейнера при загрузке страницы
