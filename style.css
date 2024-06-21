@@ -75,7 +75,7 @@ h1 {
     justify-content: center;
     margin-bottom: 20px;
     position: relative;
-    top: 20px; /* Сдвиг вниз на 20px */
+    top: 25px; /* Сдвиг вниз на 25px */
 }
 .arrow {
     background: none;
@@ -106,7 +106,7 @@ h1 {
     margin: 0 10px; /* Центрируем надпись */
 }
 .submit {
-    margin-top: 20px; /* Вернуть размер */
+    margin-top: 25px; /* Вернуть размер */
     position: relative;
     top: 10px; /* Сдвиг вниз на 10px */
 }
