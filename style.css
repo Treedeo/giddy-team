@@ -12,10 +12,12 @@ body {
     background-color: #fff;
 }
 .container {
-    width: 375px;
+    width: 390px; /* Увеличено на 15px */
     text-align: center;
+    position: relative;
 }
 header {
+    margin-top: 10px; /* Расстояние от верхнего края экрана */
     margin-bottom: 20px;
 }
 h1 {
@@ -25,12 +27,12 @@ h1 {
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 5px; /* Расстояние между квадратами */
     margin-bottom: 20px;
 }
 .tile {
-    width: 100px;
-    height: 100px;
+    width: 115px; /* Увеличено на 15px */
+    height: 115px; /* Увеличено на 15px */
     background-color: #fff;
     color: black;
     border-radius: 20px;
@@ -61,24 +63,40 @@ h1 {
     justify-content: center;
     margin-bottom: 20px;
 }
-.arrow, .percent {
-    font-size: 24px;
-    margin: 0 10px;
-}
 .arrow {
     background: none;
-    border: none;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+}
+.percent {
+    font-size: 28.8px; /* Увеличено на 20% */
+    margin: 0 10px;
 }
 .submit {
     margin-top: 20px;
 }
 .submit-btn {
-    padding: 10px 20px;
+    padding: 12px 24px; /* Увеличено на 20% */
     background-color: #000;
     color: white;
     border: none;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 19.2px; /* Увеличено на 20% */
     cursor: pointer;
+}
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+footer p {
+    font-size: 14px;
+    color: #333;
 }
