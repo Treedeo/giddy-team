@@ -136,5 +136,11 @@ footer p {
 @media (max-width: 767px) {
     body {
         padding-top: 20px; /* Сдвигаем весь дизайн на 20px вверх */
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .container {
+        width: 100%; /* Ширина контейнера на 100% */
+        padding: 0 10px; /* Убираем отступы */
     }
 }
