@@ -58,18 +58,18 @@ header h1 {
 }
 
 .arrow-button {
-    font-size: 24px;
-    border: 2px solid black;
-    border-radius: 50%;
-    width: 36.125px; /* Уменьшен размер на 15% */
-    height: 36.125px;
+    font-size: 24px; /* размер шрифта для внутренних стрелок */
+    border: 2px solid black; /* граница кнопки */
+    border-radius: 50%; /* радиус границы для круглой формы */
+    width: 40px; /* ширина кнопки */
+    height: 40px; /* высота кнопки, равная ширине для круглой формы */
     display: flex;
     justify-content: center;
     align-items: center;
     background: none;
     cursor: pointer;
-    color: black;
-    margin: 0 5px; /* Центрирование стрелок */
+    color: black; /* цвет стрелок */
+    margin: 0 5px; /* отступы вокруг кнопки */
 }
 
 .discount-controls {
