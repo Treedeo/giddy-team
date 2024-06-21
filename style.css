@@ -62,6 +62,8 @@ h1 {
 }
 .pagination-container {
     margin-bottom: 20px; /* Размещение под блоком с квадратами */
+    position: relative;
+    top: -100px; /* Сдвиг вверх на 100px */
 }
 .swiper-pagination {
     display: flex;
