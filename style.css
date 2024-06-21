@@ -61,7 +61,7 @@ h1 {
     cursor: pointer;
 }
 .pagination-container {
-    margin-top: -10px; /* Сдвиг вверх на 10px */
+    margin-top: 20px; /* Расстояние под блоком с квадратами */
 }
 .swiper-pagination {
     display: flex;
@@ -128,4 +128,9 @@ footer p {
 }
 .swiper-pagination-bullet-active {
     background: #333;
+}
+.pagination-container {
+    margin-top: 20px; /* Расстояние под блоком с квадратами */
+    display: flex;
+    justify-content: center;
 }
