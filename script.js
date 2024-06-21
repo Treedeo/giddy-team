@@ -1,49 +1,17 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const swiper = new Swiper('.swiper-container', {
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        on: {
-            slideChangeTransitionStart: function() {
-                const slides = document.querySelectorAll('.swiper-slide');
-                slides.forEach((slide) => {
-                    if (slide.classList.contains('swiper-slide-active')) {
-                        slide.style.opacity = '1';
-                        slide.style.transform = 'translateX(0)';
-                    } else {
-                        slide.style.opacity = '0';
-                        slide.style.transform = 'translateX(100%)';
-                    }
-                });
-            },
-        },
-    });
-});
+function resizeContainer() {
+    const container = document.querySelector('.container');
+    const body = document.body;
+    const scaleWidth = body.clientWidth / container.offsetWidth;
+    const scaleHeight = body.clientHeight / container.offsetHeight;
+    const scale = Math.min(scaleWidth, scaleHeight) * 0.9; // Уменьшение на 10%
 
-let currentPercentage = 5;
-let currentPrice = 10;
+    container.style.transform = `scale(${scale})`;
+    container.style.transformOrigin = 'top center';
 
-function changePercentage(direction) {
-    const percentSpan = document.getElementById('percent');
-    const priceBtn = document.getElementById('price-btn');
-    if (direction === 1 && currentPercentage < 15) {
-        currentPercentage += 5;
-    } else if (direction === -1 && currentPercentage > 5) {
-        currentPercentage -= 5;
-    }
-    currentPrice = currentPercentage * 2;
-    percentSpan.textContent = `${currentPercentage}%`;
-    priceBtn.textContent = `${currentPrice} COM`;
+    // Center the container vertically
+    const marginTop = (body.clientHeight - container.offsetHeight * scale) / 2;
+    container.style.marginTop = `${marginTop}px`;
 }
 
-const tiles = document.querySelectorAll('.tile');
-tiles.forEach(tile => {
-    tile.addEventListener('click', () => {
-        tiles.forEach(t => t.style.display = 'none');
-        tile.style.width = '300px';
-        tile.style.height = '300px';
-        tile.style.fontSize = '48px';
-        tile.textContent = tile.id.replace('tile', '');
-    });
-});
+window.addEventListener('resize', resizeContainer);
+window.addEventListener('load', resizeContainer);
