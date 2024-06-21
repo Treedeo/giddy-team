@@ -145,4 +145,8 @@ footer p {
         max-width: 390px; /* Максимальная ширина контейнера */
         margin: 0 10px; /* Убираем отступы */
     }
+    .submit {
+        margin-top: 35px; /* Опускаем кнопку еще на 15px */
+        position: relative;
+    }
 }
