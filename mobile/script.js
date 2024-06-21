@@ -21,8 +21,9 @@ function adjustContainerSize() {
     container.style.height = `${height}px`;
 
     // Центрирование точек навигации в контейнере
-    const paginationHeight = paginationContainer.offsetHeight;
-    paginationContainer.style.lineHeight = `${paginationHeight}px`; // Центрирование по вертикали
+    paginationContainer.style.display = 'flex';
+    paginationContainer.style.justifyContent = 'center';
+    paginationContainer.style.alignItems = 'center';
 }
 
 // Изначальная настройка контейнера при загрузке страницы
