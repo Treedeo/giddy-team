@@ -77,10 +77,10 @@ h1 {
     position: absolute;
 }
 .arrow.left {
-    left: 40px; /* Смещаем кнопку влево еще на 20px */
+    left: 60px; /* Смещаем кнопку влево еще на 20px */
 }
 .arrow.right {
-    right: 40px; /* Смещаем кнопку вправо еще на 20px */
+    right: 60px; /* Смещаем кнопку вправо еще на 20px */
 }
 .arrow-icon {
     font-size: 24px;
