@@ -37,7 +37,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
+    font-size: 24px;
 }
 .pagination {
     margin-bottom: 20px;
