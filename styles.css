@@ -37,7 +37,7 @@ header h1 {
 }
 
 .logo#logo1 {
-    background-color: red; /* Первый квадрат покрашен в красный */
+    background-color: red; 
 }
 
 .pagination {
