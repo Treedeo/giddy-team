@@ -12,7 +12,7 @@ body {
     background-color: #fff;
 }
 .container {
-    width: 450px; /* Ширина контейнера */
+    width: 390px; /* Уменьшил ширину контейнера */
     text-align: center;
     position: relative;
 }
@@ -27,12 +27,12 @@ h1 {
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5px; /* Расстояние между квадратами по горизонтали и вертикали */
+    grid-gap: 5px; /* Расстояние между квадратами по горизонтали и вертикали */
     margin-bottom: 20px;
 }
 .tile {
-    width: 124px; /* Размер квадрата */
-    height: 124px; /* Размер квадрата */
+    width: 120px; /* Размер квадрата */
+    height: 120px; /* Размер квадрата */
     background-color: #fff;
     color: black;
     border-radius: 20px;
