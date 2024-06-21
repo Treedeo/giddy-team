@@ -6,7 +6,6 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f5f5f5;
-    padding-top: 0;
 }
 
 .container {
@@ -15,129 +14,53 @@ body {
 
 header h1 {
     font-size: 24px;
-    margin: 10px 0 24px 0; /* Универсальный отступ 10px от верхнего края */
+    margin: 10px 0 24px 0;
 }
 
-/* Удаление специфичного медиа-запроса для мобильных устройств, так как отступ теперь одинаков для всех */
-
-.logo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 11.5px; /* Расстояние между логотипами */
-    margin-bottom: 16px; /* Начальный отступ от заголовка до логотипов */
+.gallery {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    width: 100%;
+    scroll-snap-type: x mandatory;
 }
 
-/* Медиа-запрос для мобильных устройств */
-@media (max-width: 600px) {
-    header h1 {
-        margin: 5px 0; /* Отступ сверху 5px на мобильных устройствах */
-    }
-
-    .logo-grid {
-        margin-top: 20%; /* Увеличенное расстояние от названия до логотипов на 20% */
-    }
-}
-
-.logo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 11.5px; /* Расстояние между квадратами */
-    margin-bottom: 16px;
+.slide {
+    display: flex;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    width: 100%;
 }
 
 .logo {
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
     border: 2px solid black;
-    border-radius: 30px; 
+    border-radius: 15px;
+    margin: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
 }
 
-.logo#logo1 {
-    background-color: red; 
+.discount-info {
+    text-align: center;
+    margin-top: 20px;
 }
 
-.pagination {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 16px;
-}
-
-.dot {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    background-color: gray;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.dot.active {
-    background-color: black;
-}
-
-.arrow-button {
-    font-size: 24px; /* размер шрифта для внутренних стрелок */
-    border: 2px solid black; /* граница кнопки */
-    border-radius: 50%; /* полное скругление для круглой формы */
-    width: 30px; /* ширина кнопки */
-    height: 30px; /* высота кнопки, равная ширине для круглой формы */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: none;
-    cursor: pointer;
-    color: black; /* цвет стрелок */
-    margin: 0 5px; /* отступы вокруг кнопки */
-    padding: 0; /* убедитесь, что padding отсутствует */
-    line-height: 30px; /* это гарантирует, что текст не вытянет форму */
-}
-
-/* Медиа-запрос для адаптации под мобильные устройства */
-@media (max-width: 600px) {
-    .arrow-button {
-        width: 30px; /* уменьшаем размеры, чтобы предотвратить вытягивание */
-        height: 30px;
-        font-size: 16px; /* уменьшение размера шрифта для стрелок, если необходимо */
-    }
-}
-
-.discount-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 16px;
-}
-
-#discount {
-    margin: 0 10px;
-    font-size: 30.36px;
-}
-
-.price {
-    font-size: 24px;
-    margin-bottom: 16px;
-}
-
-.rounded-button {
+.price-button {
     font-size: 18px;
     padding: 10px 20px;
+    background-color: black;
+    color: white;
     border: 2px solid black;
-    background: none;
     border-radius: 15px;
     cursor: pointer;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    color: black;
+    display: inline-block;
+    text-align: center;
 }
 
-.version {
-    font-size: 12px;
-    color: black;
-    margin-top: 5px;
-    display: block;
-    content: "v.0007"; /* Обновлен номер версии */
+.discount-percent {
+    font-size: 16px;
+    margin-top: 10px;
 }
