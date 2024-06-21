@@ -42,6 +42,11 @@ body {
     border: 1px solid black; /* Граница для визуализации */
 }
 header {
-    font-size: 16px;
+    font-size: 28px; /* Размер шрифта */
+    line-height: 40px; /* Высота строки соответствует высоте контейнера */
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Высота header совпадает с высотой родителя */
 }
