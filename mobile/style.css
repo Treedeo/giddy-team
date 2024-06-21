@@ -93,8 +93,8 @@ header {
     width: 100%;
 }
 .swiper-pagination-bullet {
-    background: #000;
+    background: red; /* Красный цвет для точек навигации */
 }
 .swiper-pagination-bullet-active {
-    background: #007aff;
+    background: red; /* Красный цвет для активной точки навигации */
 }
