@@ -62,7 +62,7 @@ h1 {
 }
 .pagination-container {
     position: relative;
-    top: 25px; /* Сдвиг вниз на 25px */
+    top: 35px; /* Сдвиг вниз на 35px */
 }
 .swiper-pagination {
     display: flex;
@@ -75,37 +75,10 @@ h1 {
     justify-content: center;
     margin-bottom: 20px;
     position: relative;
-}
-.arrow {
-    background: none;
-    border: 2px solid black;
-    border-radius: 50%;
-    width: 32px; /* Уменьшено, чтобы соответствовать границам кнопки 10 COM */
-    height: 32px; /* Уменьшено, чтобы соответствовать границам кнопки 10 COM */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    position: absolute;
-}
-.arrow.left {
-    left: 80px; /* Смещаем кнопку влево */
-}
-.arrow.right {
-    right: 80px; /* Смещаем кнопку вправо */
-}
-.arrow-icon {
-    font-size: 24px;
-    color: black;
-    display: inline-block;
-    line-height: 1;
-}
-.percent {
-    font-size: 38.08px; /* Увеличено на 15% от 33.12px */
-    margin: 0 10px; /* Центрируем надпись */
+    top: 10px; /* Сдвиг вниз на 10px */
 }
 .submit {
-    margin-top: 20px;
+    margin-top: 30px; /* Увеличение на 10px */
     position: relative;
 }
 .submit-btn {
