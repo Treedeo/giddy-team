@@ -1,52 +1,26 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const gallery = document.querySelector('.gallery');
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+let currentPercentage = 5;
+let currentPrice = 10;
 
-    // Настройка событий для мыши
-    gallery.addEventListener('mousedown', (e) => {
-        isDown = true;
-        gallery.classList.add('active');
-        startX = e.pageX - gallery.offsetLeft;
-        scrollLeft = gallery.scrollLeft;
+function changePercentage(direction) {
+    const percentSpan = document.getElementById('percent');
+    const priceBtn = document.getElementById('price-btn');
+    if (direction === 1 && currentPercentage < 15) {
+        currentPercentage += 5;
+    } else if (direction === -1 && currentPercentage > 5) {
+        currentPercentage -= 5;
+    }
+    currentPrice = currentPercentage * 2;
+    percentSpan.textContent = `${currentPercentage}%`;
+    priceBtn.textContent = `${currentPrice} COM`;
+}
+
+const tiles = document.querySelectorAll('.tile');
+tiles.forEach(tile => {
+    tile.addEventListener('click', () => {
+        tiles.forEach(t => t.style.display = 'none');
+        tile.style.width = '300px';
+        tile.style.height = '300px';
+        tile.style.fontSize = '48px';
+        tile.textContent = tile.id.replace('tile', '');
     });
-
-    gallery.addEventListener('mouseleave', () => {
-        isDown = false;
-        gallery.classList.remove('active');
-    });
-
-    gallery.addEventListener('mouseup', () => {
-        isDown = false;
-        gallery.classList.remove('active');
-    });
-
-    gallery.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - gallery.offsetLeft;
-        const walk = (x - startX) * 3; // Умножаем на 3 для увеличения скорости скроллинга
-        gallery.scrollLeft = scrollLeft - walk;
-    });
-
-    // Настройка событий для тачскринов
-    gallery.addEventListener('touchstart', (e) => {
-        isDown = true;
-        gallery.classList.add('active');
-        startX = e.touches[0].pageX - gallery.offsetLeft;
-        scrollLeft = gallery.scrollLeft;
-    }, {passive: true});
-
-    gallery.addEventListener('touchend', () => {
-        isDown = false;
-        gallery.classList.remove('active');
-    });
-
-    gallery.addEventListener('touchmove', (e) => {
-        if (!isDown) return;
-        const x = e.touches[0].pageX - gallery.offsetLeft;
-        const walk = (x - startX) * 3; // Умножаем на 3 для увеличения скорости скроллинга
-        gallery.scrollLeft = scrollLeft - walk;
-    }, {passive: true});
 });
