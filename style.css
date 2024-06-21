@@ -133,7 +133,7 @@ footer p {
 }
 
 /* Адаптивный дизайн для телефонов */
-@media (max-width: 767px) {
+@media (max-width: 1179px) {
     body {
         padding-top: 20px; /* Сдвигаем весь дизайн на 20px вверх */
         padding-left: 0;
