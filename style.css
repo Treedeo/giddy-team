@@ -8,26 +8,28 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #fff;
     overflow: hidden; /* Убираем скроллинг */
 }
 .container {
-    width: 390px; /* Ширина контейнера для десктопа */
+    max-width: 390px; /* Максимальная ширина контейнера для десктопа */
+    width: 100%;
+    padding: 20px; /* Добавляем отступы */
     text-align: center;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 header {
-    margin-top: 10px; /* Расстояние от верхнего края экрана */
-    margin-bottom: 23px; /* Увеличено на 15% */
+    margin-bottom: 1.5rem; /* Добавляем отступ снизу */
 }
 h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 1.5rem; /* Относительный размер шрифта */
 }
 .swiper-container {
     width: 100%;
-    height: auto;
+    margin-bottom: 1.5rem; /* Добавляем отступ снизу */
 }
 .swiper-slide {
     display: flex;
@@ -44,12 +46,12 @@ h1 {
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5px; /* Расстояние между квадратами по горизонтали и вертикали */
-    margin-bottom: 20px;
+    gap: 5px; /* Расстояние между квадратами */
 }
 .tile {
-    width: 120px; /* Размер квадрата */
-    height: 120px; /* Размер квадрата */
+    width: 100%; /* Размер квадрата */
+    padding-top: 100%; /* Соотношение сторон 1:1 */
+    position: relative;
     background-color: #fff;
     color: black;
     border-radius: 20px;
@@ -57,73 +59,64 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 1.5rem; /* Относительный размер шрифта */
     cursor: pointer;
 }
+.tile span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .pagination-container {
-    position: relative;
-    top: 45px; /* Сдвиг вниз на 45px */
+    margin-bottom: 1.5rem; /* Добавляем отступ снизу */
 }
 .swiper-pagination {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px; /* Размещение под блоком с квадратами */
 }
 .control {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
-    position: relative;
-    top: 35px; /* Сдвиг вниз на 35px */
+    margin-bottom: 1.5rem; /* Добавляем отступ снизу */
 }
 .arrow {
     background: none;
     border: 2px solid black;
     border-radius: 50%;
-    width: 32px;
-    height: 32px;
+    width: 2rem; /* Относительный размер */
+    height: 2rem; /* Относительный размер */
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    position: absolute;
-}
-.arrow.left {
-    left: 80px; /* Смещаем кнопку влево */
-}
-.arrow.right {
-    right: 80px; /* Смещаем кнопку вправо */
 }
 .arrow-icon {
-    font-size: 24px;
+    font-size: 1.5rem; /* Относительный размер */
     color: black;
-    display: inline-block;
-    line-height: 1;
 }
 .percent {
-    font-size: 33.12px; /* Вернуть размер */
-    margin: 0 10px; /* Центрируем надпись */
+    font-size: 2rem; /* Относительный размер */
+    margin: 0 1rem; /* Добавляем отступ по бокам */
 }
 .submit {
-    margin-top: 20px; /* Вернуть размер */
-    position: relative;
-    top: 25px; /* Сдвиг вниз на 25px */
+    margin-top: 1.5rem; /* Добавляем отступ сверху */
 }
 .submit-btn {
-    padding: 12px 74px; /* Вернуть размер */
+    padding: 0.5rem 2rem; /* Относительные отступы */
     background-color: #fff;
     color: black;
     border: 2px solid black; /* Восстанавливаем черную обводку */
-    border-radius: 24px; /* Вернуть размер */
-    font-size: 19.2px; /* Вернуть размер */
+    border-radius: 1.5rem; /* Относительный радиус */
+    font-size: 1.2rem; /* Относительный размер шрифта */
     cursor: pointer;
 }
 footer {
-    margin-top: 10px;
+    margin-top: 1.5rem; /* Добавляем отступ сверху */
 }
 footer p {
-    font-size: 14px;
+    font-size: 0.875rem; /* Относительный размер шрифта */
     color: #333;
 }
 .swiper-pagination-bullet {
@@ -136,17 +129,11 @@ footer p {
 /* Адаптивный дизайн для телефонов */
 @media (max-width: 767px) {
     body {
-        padding-top: 20px; /* Сдвигаем весь дизайн на 20px вверх */
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .container {
-        width: 100%; /* Ширина контейнера на 100% */
-        max-width: 390px; /* Максимальная ширина контейнера */
-        margin: 0 10px; /* Убираем отступы */
+        padding-top: 10px; /* Сдвигаем весь дизайн на 10px вверх */
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .submit {
-        margin-top: 35px; /* Опускаем кнопку еще на 15px */
-        position: relative;
+        margin-top: 3rem; /* Опускаем кнопку на 15px */
     }
 }
