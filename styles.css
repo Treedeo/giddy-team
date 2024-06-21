@@ -60,26 +60,28 @@ header h1 {
 }
 
 .arrow-button {
-    font-size: 24px;
-    border: 2px solid black;
-    border-radius: 50%; /* Полное скругление для круглой формы */
-    width: 40px;
-    height: 40px;
+    font-size: 24px; /* размер шрифта для внутренних стрелок */
+    border: 2px solid black; /* граница кнопки */
+    border-radius: 50%; /* полное скругление для круглой формы */
+    width: 30px; /* ширина кнопки */
+    height: 30px; /* высота кнопки, равная ширине для круглой формы */
     display: flex;
     justify-content: center;
     align-items: center;
     background: none;
     cursor: pointer;
-    color: black;
-    margin: 0 5px;
+    color: black; /* цвет стрелок */
+    margin: 0 5px; /* отступы вокруг кнопки */
+    padding: 0; /* убедитесь, что padding отсутствует */
+    line-height: 30px; /* это гарантирует, что текст не вытянет форму */
 }
 
 /* Медиа-запрос для адаптации под мобильные устройства */
 @media (max-width: 600px) {
     .arrow-button {
-        width: 30px; /* Уменьшаем размеры, чтобы предотвратить вытягивание */
+        width: 30px; /* уменьшаем размеры, чтобы предотвратить вытягивание */
         height: 30px;
-        font-size: 16px; /* Уменьшение размера шрифта для стрелок, если необходимо */
+        font-size: 16px; /* уменьшение размера шрифта для стрелок, если необходимо */
     }
 }
 
