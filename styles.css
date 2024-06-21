@@ -10,57 +10,90 @@ body {
 
 .container {
     text-align: center;
+    width: 90%; /* Чуть меньше ширины, чтобы обеспечить отступы по бокам */
 }
 
 header h1 {
     font-size: 24px;
-    margin: 10px 0 24px 0;
+    margin: 20px 0; /* Отступ сверху и снизу */
 }
 
 .gallery {
     display: flex;
-    overflow-x: auto; /* Enables horizontal scrolling */
-    width: 100%;
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
 }
 
 .slide {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     flex-shrink: 0;
     scroll-snap-align: start;
-    width: 100%;
+    width: 100%; /* Заполняет весь доступный горизонтальный пространство */
+    padding: 20px 0; /* Паддинг сверху и снизу для каждого слайда */
 }
 
 .logo {
-    width: 100px;
+    width: 30%; /* Процентное значение для трех логотипов в одном ряду */
     height: 100px;
+    margin: 10px; /* Отступы между логотипами */
     border: 2px solid black;
-    border-radius: 15px;
-    margin: 5px;
+    border-radius: 15px; /* Скругленные углы */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
+    cursor: pointer; /* Курсор в виде указателя, показывающий, что логотипы кликабельны */
 }
 
-.discount-info {
+.pagination {
     text-align: center;
-    margin-top: 20px;
+    margin: 20px 0;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.dot.active {
+    background-color: black;
+}
+
+.discount-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.arrow-button {
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.discount-percent {
+    margin: 0 20px;
+    font-size: 24px;
 }
 
 .price-button {
     font-size: 18px;
-    padding: 10px 20px;
-    background-color: black;
     color: white;
+    background-color: black;
     border: 2px solid black;
     border-radius: 15px;
+    padding: 10px 20px;
     cursor: pointer;
-    display: inline-block;
+    display: block;
+    margin: 20px auto; /* Центрирование кнопки */
     text-align: center;
-}
-
-.discount-percent {
-    font-size: 16px;
-    margin-top: 10px;
 }
