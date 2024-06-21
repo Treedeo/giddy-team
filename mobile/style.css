@@ -56,14 +56,14 @@ header {
     gap: 5px; /* Расстояние между квадратами */
     margin-top: 30px; /* Отступ от желтого контейнера */
     border: 2px solid green; /* Граница для визуализации зеленого контейнера */
-    width: calc(3 * 80px + 2 * 5px); /* Размер контейнера с учетом размера квадратов и расстояний между ними */
-    height: calc(3 * 80px + 2 * 5px); /* Квадратное соотношение сторон */
+    width: calc(3 * 104px + 2 * 5px); /* Увеличено на 30% от 80px */
+    height: calc(3 * 104px + 2 * 5px); /* Квадратное соотношение сторон */
     justify-items: center;
     align-items: center;
 }
 .grid-item {
-    width: 80px;
-    height: 80px;
+    width: 104px; /* Увеличено на 30% от 80px */
+    height: 104px; /* Увеличено на 30% от 80px */
     background-color: white;
     border: 2px solid black;
     display: flex;
