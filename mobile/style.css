@@ -11,6 +11,7 @@ body {
     min-height: 100vh;
     background-color: #fff;
     overflow: hidden; /* Убираем скроллинг */
+    border: 1px solid green; /* Граница для всего тела */
 }
 .container {
     width: 100%;
@@ -20,18 +21,22 @@ body {
     padding: 10px;
     transform: scale(1.122); /* Уменьшаем дизайн на 3% от предыдущего значения */
     transform-origin: center top; /* Центрируем трансформацию */
+    border: 1px solid purple; /* Граница для контейнера */
 }
 header {
     margin-top: 10px; /* Расстояние от верхнего края экрана */
     margin-bottom: 20px; /* Увеличено для мобильных устройств */
+    border: 1px solid orange; /* Граница для header */
 }
 h1 {
     font-size: 24px; /* Увеличено для мобильных устройств */
     margin-bottom: 20px;
+    border: 1px solid yellow; /* Граница для h1 */
 }
 .swiper-container {
     width: 100%;
     height: auto;
+    border: 1px solid pink; /* Граница для swiper-container */
 }
 .swiper-slide {
     display: flex;
@@ -40,6 +45,7 @@ h1 {
     opacity: 0;
     transition: opacity 1s, transform 1s;
     transform: translateX(100%);
+    border: 1px solid lightblue; /* Граница для swiper-slide */
 }
 .swiper-slide-active {
     opacity: 1;
@@ -51,7 +57,7 @@ h1 {
     gap: 5px; /* Расстояние между квадратами по горизонтали и вертикали */
     margin: 0 auto; /* Центрируем блок по горизонтали */
     margin-bottom: 20px; /* Увеличено для мобильных устройств */
-    border: 1px solid red; /* Показываем границы сетки */
+    border: 1px solid red; /* Граница для галереи */
 }
 .tile {
     width: 134px; /* Уменьшено на 3% от предыдущего значения */
@@ -65,16 +71,18 @@ h1 {
     align-items: center;
     font-size: 18px; /* Размер шрифта для мобильных устройств */
     cursor: pointer;
-    border: 1px solid blue; /* Показываем границы квадратов */
+    border: 1px solid blue; /* Граница для квадратов */
 }
 .pagination-container {
     position: relative;
     top: 45px; /* Сдвиг вниз для мобильных устройств */
+    border: 1px solid brown; /* Граница для pagination-container */
 }
 .swiper-pagination {
     display: flex;
     justify-content: center;
     margin-bottom: 20px; /* Размещение под блоком с квадратами */
+    border: 1px solid black; /* Граница для swiper-pagination */
 }
 .control {
     display: flex;
@@ -83,6 +91,7 @@ h1 {
     margin-bottom: 20px;
     position: relative;
     top: 35px; /* Сдвиг вниз для мобильных устройств */
+    border: 1px solid magenta; /* Граница для блока с контролами */
 }
 .arrow {
     background: none;
@@ -95,6 +104,7 @@ h1 {
     align-items: center;
     cursor: pointer;
     position: absolute;
+    border: 1px solid cyan; /* Граница для кнопок */
 }
 .arrow.left {
     left: 60px; /* Смещаем кнопку влево для мобильных устройств */
@@ -111,11 +121,13 @@ h1 {
 .percent {
     font-size: 24px; /* Размер шрифта для мобильных устройств */
     margin: 0 10px; /* Центрируем надпись */
+    border: 1px solid lime; /* Граница для процента */
 }
 .submit {
     margin-top: 20px; /* Увеличено для мобильных устройств */
     position: relative;
     top: 25px; /* Сдвиг вниз для мобильных устройств */
+    border: 1px solid violet; /* Граница для submit блока */
 }
 .submit-btn {
     padding: 12px 74px; /* Размер кнопки для мобильных устройств */
@@ -125,13 +137,16 @@ h1 {
     border-radius: 24px; /* Радиус углов для мобильных устройств */
     font-size: 19.2px; /* Размер шрифта для мобильных устройств */
     cursor: pointer;
+    border: 1px solid grey; /* Граница для кнопки */
 }
 footer {
     margin-top: 10px;
+    border: 1px solid navy; /* Граница для footer */
 }
 footer p {
     font-size: 14px; /* Размер шрифта для мобильных устройств */
     color: #333;
+    border: 1px solid olive; /* Граница для текста в footer */
 }
 .swiper-pagination-bullet {
     background: #bbb;
