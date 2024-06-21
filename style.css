@@ -49,8 +49,8 @@ h1 {
     gap: 5px; /* Расстояние между квадратами */
 }
 .tile {
-    width: 100%; /* Размер квадрата */
-    padding-top: 100%; /* Соотношение сторон 1:1 */
+    width: calc(33.33% - 5px); /* Размер квадрата */
+    padding-top: calc(33.33% - 5px); /* Поддержка соотношения сторон 1:1 */
     position: relative;
     background-color: #fff;
     color: black;
