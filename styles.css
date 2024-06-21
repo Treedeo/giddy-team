@@ -15,7 +15,25 @@ body {
 
 header h1 {
     font-size: 24px;
-    margin: 1px 0 24px 0; /* верхний отступ 1px, нижний отступ 24px */
+    margin: 1px 0 24px 0; /* Отступ для компьютеров */
+}
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 11.5px; /* Расстояние между логотипами */
+    margin-bottom: 16px; /* Начальный отступ от заголовка до логотипов */
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 600px) {
+    header h1 {
+        margin: 5px 0; /* Отступ сверху 5px на мобильных устройствах */
+    }
+
+    .logo-grid {
+        margin-top: 20%; /* Увеличенное расстояние от названия до логотипов на 20% */
+    }
 }
 
 .logo-grid {
