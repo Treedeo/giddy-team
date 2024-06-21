@@ -10,6 +10,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #fff;
+    padding-right: 5px; /* Сдвигаем весь дизайн на 5px вправо */
 }
 .container {
     width: 390px; /* Ширина контейнера */
