@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fff;
+    overflow: hidden; /* Убираем скроллинг */
+}
+.container {
+    width: 90%; /* Ширина контейнера для мобильных устройств */
+    max-width: 390px; /* Максимальная ширина контейнера */
+    text-align: center;
+    position: relative;
+}
+header {
+    margin-top: 10px; /* Расстояние от верхнего края экрана */
+    margin-bottom: 15px; /* Уменьшено для мобильных устройств */
+}
+h1 {
+    font-size: 20px; /* Уменьшено для мобильных устройств */
+    margin-bottom: 10px;
+}
+.swiper-container {
+    width: 100%;
+    height: auto;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+    transform: translateX(100%);
+}
+.swiper-slide-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px; /* Расстояние между квадратами по горизонтали и вертикали */
+    margin-bottom: 15px; /* Уменьшено для мобильных устройств */
+}
+.tile {
+    width: 100px; /* Уменьшено для мобильных устройств */
+    height: 100px; /* Уменьшено для мобильных устройств */
+    background-color: #fff;
+    color: black;
+    border-radius: 15px; /* Уменьшено для мобильных устройств */
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px; /* Уменьшено для мобильных устройств */
+    cursor: pointer;
+}
+.pagination-container {
+    position: relative;
+    top: 35px; /* Уменьшено для мобильных устройств */
+}
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Уменьшено для мобильных устройств */
+}
+.control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px; /* Уменьшено для мобильных устройств */
+    position: relative;
+    top: 25px; /* Уменьшено для мобильных устройств */
+}
+.arrow {
+    background: none;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 28px; /* Уменьшено для мобильных устройств */
+    height: 28px; /* Уменьшено для мобильных устройств */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+}
+.arrow.left {
+    left: 60px; /* Смещаем кнопку влево для мобильных устройств */
+}
+.arrow.right {
+    right: 60px; /* Смещаем кнопку вправо для мобильных устройств */
+}
+.arrow-icon {
+    font-size: 18px; /* Уменьшено для мобильных устройств */
+    color: black;
+    display: inline-block;
+    line-height: 1;
+}
+.percent {
+    font-size: 24px; /* Уменьшено для мобильных устройств */
+    margin: 0 10px; /* Центрируем надпись */
+}
+.submit {
+    margin-top: 15px; /* Уменьшено для мобильных устройств */
+    position: relative;
+    top: 20px; /* Уменьшено для мобильных устройств */
+}
+.submit-btn {
+    padding: 10px 50px; /* Уменьшено для мобильных устройств */
+    background-color: #fff;
+    color: black;
+    border: 2px solid black; /* Восстанавливаем черную обводку */
+    border-radius: 20px; /* Уменьшено для мобильных устройств */
+    font-size: 16px; /* Уменьшено для мобильных устройств */
+    cursor: pointer;
+}
+footer {
+    margin-top: 10px;
+}
+footer p {
+    font-size: 12px; /* Уменьшено для мобильных устройств */
+    color: #333;
+}
+.swiper-pagination-bullet {
+    background: #bbb;
+}
+.swiper-pagination-bullet-active {
+    background: #333;
+}
