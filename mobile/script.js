@@ -12,16 +12,18 @@ window.addEventListener('resize', adjustContainerSize);
 
 function adjustContainerSize() {
     const container = document.querySelector('.container');
+    const paginationContainer = document.querySelector('.pagination-container');
+    const swiperPagination = document.querySelector('.swiper-pagination');
+
     const width = window.innerWidth;
     const height = window.innerHeight;
 
     container.style.width = `${width}px`;
     container.style.height = `${height}px`;
 
-    // Убедимся, что элементы внутри контейнера остаются в центре
-    const paginationContainer = document.querySelector('.pagination-container');
-    paginationContainer.style.width = `${width}px`;
-    paginationContainer.style.height = '40px';
+    // Центрирование точек навигации в контейнере
+    const paginationHeight = paginationContainer.offsetHeight;
+    swiperPagination.style.top = `${paginationHeight / 2}px`;
 }
 
 // Изначальная настройка контейнера при загрузке страницы
