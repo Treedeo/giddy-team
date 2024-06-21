@@ -18,7 +18,7 @@ body {
     text-align: center;
     position: relative;
     padding: 10px;
-    transform: scale(1.155); /* Увеличиваем дизайн на 15% */
+    transform: scale(1.122); /* Уменьшаем дизайн на 3% от предыдущего значения */
     transform-origin: center top; /* Центрируем трансформацию */
 }
 header {
@@ -51,10 +51,11 @@ h1 {
     gap: 5px; /* Расстояние между квадратами по горизонтали и вертикали */
     margin: 0 auto; /* Центрируем блок по горизонтали */
     margin-bottom: 20px; /* Увеличено для мобильных устройств */
+    border: 1px solid red; /* Показываем границы сетки */
 }
 .tile {
-    width: 138px; /* Увеличено на 5% от предыдущего значения */
-    height: 138px; /* Увеличено на 5% от предыдущего значения */
+    width: 134px; /* Уменьшено на 3% от предыдущего значения */
+    height: 134px; /* Уменьшено на 3% от предыдущего значения */
     background-color: #fff;
     color: black;
     border-radius: 15px; /* Радиус углов для мобильных устройств */
@@ -64,6 +65,7 @@ h1 {
     align-items: center;
     font-size: 18px; /* Размер шрифта для мобильных устройств */
     cursor: pointer;
+    border: 1px solid blue; /* Показываем границы квадратов */
 }
 .pagination-container {
     position: relative;
