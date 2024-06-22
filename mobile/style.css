@@ -62,6 +62,17 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden; /* Обрезаем все, что выходит за границы контейнера */
+}
+
+.rectangle {
+    width: calc(50% - 5px); /* Ширина прямоугольников */
+    height: 30px; /* Высота прямоугольников */
+    margin: 2.5px; /* Расстояние между прямоугольниками */
+    background-color: lightgray;
+    border: 2px solid black;
+    border-radius: 15px; /* Скругленные края */
 }
 
 .pagination-container {
