@@ -17,6 +17,7 @@ html, body {
 
 body {
     font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.1em; /* Увеличение межбуквенного расстояния на 10% */
     display: flex;
     justify-content: center;
     align-items: center;
