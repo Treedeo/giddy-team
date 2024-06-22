@@ -87,73 +87,27 @@ header {
     aspect-ratio: 1 / 1; /* Квадратное соотношение сторон */
 }
 
-.pagination-container {
-    margin-top: 2vh; /* Отступ от зеленого контейнера в процентах */
-    background-color: pink; /* Розовый цвет контейнера */
-    width: 100%;
-    height: 5vh; /* Высота контейнера в процентах от высоты экрана */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black; /* Граница для визуализации */
-    position: relative; /* Обеспечивает, что точки навигации будут привязаны к этому контейнеру */
-}
-
-.swiper-pagination {
-    position: absolute;
-    top: 50%; /* Центрирование по вертикали */
-    left: 50%; /* Центрирование по горизонтали */
-    transform: translate(-50%, -50%); /* Корректировка центрирования */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto; /* Устанавливаем ширину в auto */
-}
-
-.swiper-pagination-bullet {
-    background: gray !important; /* Серый цвет для пассивной точки навигации */
-}
-
-.swiper-pagination-bullet-active {
-    background: black !important; /* Черный цвет для активной точки навигации */
-}
-
 .discount-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2vh; /* Отступ от контейнера с точками навигации в процентах */
+    margin-top: 2vh; /* Отступ от зеленого контейнера в процентах */
     background-color: orange; /* Оранжевый цвет контейнера */
     width: 100%;
     height: 10vh; /* Высота контейнера в процентах от высоты экрана */
     border: 1px solid black; /* Граница для визуализации */
 }
 
-.discount-value {
-    font-size: 2.3em; /* Увеличено на 15% */
-    margin: 0 2vw;
-}
-
-.arrow-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2vw; /* Расстояние между кнопками и текстом */
-}
-
-.arrow-left,
-.arrow-right {
-    font-size: 1.5em; /* Вернули размер шрифта */
+.discount-button {
+    font-size: 2em; /* Размер шрифта */
     border: 2px solid black;
-    background: white;
-    color: black;
-    border-radius: 50%;
-    width: 10vw; /* Вернули размер кнопок */
-    height: 10vw; /* Вернули размер кнопок */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: black;
+    color: white;
+    padding: 1vh 2vw; /* Padding в процентах */
+    border-radius: 30px; /* Скругленные края */
     cursor: pointer;
+    width: 50vw;
+    text-align: center;
 }
 
 .buy-container {
