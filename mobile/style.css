@@ -103,7 +103,7 @@ header {
     height: 20px;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) rotate(-90deg); /* Поворот против часовой стрелки на 90 градусов */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,18 +120,18 @@ header {
 }
 
 .arrow::before {
-    transform: rotate(-45deg);
-    bottom: 5px; /* Смещаем верхнюю линию */
+    transform: rotate(45deg);
+    top: -5px; /* Смещаем верхнюю линию */
 }
 
 .arrow::after {
-    transform: rotate(45deg);
-    bottom: 5px; /* Смещаем нижнюю линию */
+    transform: rotate(-45deg);
+    top: 5px; /* Смещаем нижнюю линию */
 }
 
 .white-container.expanded .arrow {
     opacity: 0; /* Стрелка исчезает при развернутом контейнере */
-    transform: translateY(-100%); /* Перемещаем стрелку вверх */
+    transform: translateY(-100%) rotate(-90deg); /* Перемещаем стрелку вверх */
 }
 
 .row {
