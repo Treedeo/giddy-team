@@ -66,16 +66,22 @@ header {
     background-color: transparent;
 }
 
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: calc(100% / 3 - 10px); /* Делим высоту контейнера на 3 ряда с учетом отступов */
+}
+
 .sub-container {
-    width: 95%;
-    height: calc(100% / 6 - 5px); /* Высота контейнера, разделенная на 6 частей с учетом отступов */
+    width: calc(50% - 10px); /* Делаем два контейнера в ряду с отступами */
     background-color: lightgray;
     border: 2px solid black;
-    margin-bottom: 5px; /* Отступ между контейнерами */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1em;
+    margin: 5px;
 }
 
 .pagination-container {
