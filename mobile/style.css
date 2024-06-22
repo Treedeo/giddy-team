@@ -111,22 +111,20 @@ header {
     transition: opacity 0.5s, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Плавный переход для прозрачности и перемещения */
 }
 
-.arrow::before {
+.arrow::before, .arrow::after {
     content: '';
     position: absolute;
     width: 15px;
     height: 2px;
     background-color: black;
+}
+
+.arrow::before {
     transform: rotate(45deg);
-    top: 5px; /* Смещаем верхнюю линию */
+    top: -5px; /* Смещаем верхнюю линию */
 }
 
 .arrow::after {
-    content: '';
-    position: absolute;
-    width: 15px;
-    height: 2px;
-    background-color: black;
     transform: rotate(-45deg);
     top: 5px; /* Смещаем нижнюю линию */
 }
