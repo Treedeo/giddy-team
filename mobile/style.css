@@ -43,6 +43,7 @@ body {
     background-color: yellow;
     border: 1px solid black;
     padding: 0 10px;
+    z-index: 2; /* Применяем слой для верхнего контейнера */
 }
 
 header {
@@ -74,17 +75,19 @@ header {
     border: 2px solid green;
     overflow-y: scroll; /* Добавляем вертикальный скроллинг */
     position: relative;
+    z-index: 1;
 }
 
 .white-container {
     width: 100%;
     height: 30px;
-    background-color: white;
+    background-color: lightblue; /* Голубой цвет */
     border: 2px solid pink; /* Розовая обводка */
     border-radius: 15px;
     position: absolute;
     top: -35px; /* Размещаем сверху зеленого контейнера */
     left: 0;
+    z-index: 2; /* Применяем слой для верхнего контейнера */
 }
 
 .row {
