@@ -69,7 +69,7 @@ header {
 
 .green-container {
     width: 100%;
-    height: calc(100vh - calc(10vh * 0.8 * 0.8 * 0.7) - 2vh - 4px); /* Высота до конца экрана */
+    height: calc((100vh - calc(10vh * 0.8 * 0.8 * 0.7) - 2vh - 4px) * 0.7); /* Уменьшаем высоту на 30% */
     margin-top: 2vh;
     border: 2px solid green;
     overflow-y: scroll; /* Добавляем вертикальный скроллинг */
@@ -84,7 +84,7 @@ header {
 
 .sub-container {
     width: calc(50% - 3px); /* Ширина контейнеров чтобы поместились два в ряд */
-    height: calc(30px * 1.6 * 1.6); /* Увеличиваем высоту еще на 60% */
+    height: calc(30px * 1.6 * 1.6 * 1.3); /* Увеличиваем высоту еще на 30% */
     background-color: lightgray;
     border: 2px solid black;
     border-radius: 15px; /* Скругление краев */
