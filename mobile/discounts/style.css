@@ -23,7 +23,7 @@
 
 .rect {
     width: calc(50% - 2.5px); /* Добавляем расстояние между колонками */
-    height: 93.6px; /* Уменьшаем высоту на 10% (104px * 0.9) */
+    height: 79.56px; /* Уменьшаем высоту на 15% от текущего значения (93.6px * 0.85) */
     background-color: lightgray;
     border: 2px solid black;
     border-radius: 15px;
