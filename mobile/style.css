@@ -66,20 +66,25 @@ header {
 }
 
 .swiper-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 прямоугольника в ряд */
-    gap: 5px; /* Расстояние между прямоугольниками */
+    display: flex;
+    flex-wrap: wrap; /* Обертка для прямоугольников */
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 5px; /* Внутренний отступ для зеленого контейнера */
+    box-sizing: border-box;
 }
 
 .swiper-slide {
+    flex: 0 0 calc(50% - 10px); /* Размер прямоугольников */
+    height: 30px; /* Высота прямоугольников */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30px; /* Высота прямоугольников */
 }
 
 .rectangle {
-    width: calc(50% - 10px); /* Ширина прямоугольников с учетом отступов */
+    width: 100%;
     height: 100%;
     background-color: lightgray;
     border: 2px solid black;
