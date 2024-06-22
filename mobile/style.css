@@ -127,24 +127,31 @@ header {
     border: 1px solid black; /* Граница для визуализации */
 }
 
-.discount-container .arrow-left,
-.discount-container .arrow-right {
-    font-size: 1.5em; /* Размер шрифта в em */
+.discount-value {
+    font-size: 2.3em; /* Увеличено на 15% */
+    margin: 0 2vw;
+}
+
+.arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw; /* Расстояние между кнопками и текстом */
+}
+
+.arrow-left,
+.arrow-right {
+    font-size: 1.3em; /* Уменьшено на 15% */
     border: 2px solid black;
     background: white;
     color: black;
     border-radius: 50%;
-    width: 10vw; /* Ширина кнопки в процентах от ширины экрана */
-    height: 10vw; /* Высота кнопки в процентах от ширины экрана */
+    width: 8vw; /* Ширина кнопки в процентах от ширины экрана */
+    height: 8vw; /* Высота кнопки в процентах от ширины экрана */
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-}
-
-.discount-container .discount-value {
-    font-size: 2.3em; /* Увеличено на 15% */
-    margin: 0 2vw;
 }
 
 .buy-container {
@@ -158,7 +165,7 @@ header {
     border: 1px solid black; /* Граница для визуализации */
 }
 
-.buy-container .buy-button {
+.buy-button {
     font-size: 1.5em; /* Размер шрифта в em */
     border: 2px solid black;
     background: black;
