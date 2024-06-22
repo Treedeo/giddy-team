@@ -67,9 +67,8 @@ header {
 
 .swiper-wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 5px; /* Расстояние между квадратами */
+    grid-template-columns: repeat(2, 1fr); /* 2 прямоугольника в ряд */
+    gap: 5px; /* Расстояние между прямоугольниками */
     width: 100%;
     height: 100%;
     padding: 5px; /* Внутренний отступ для зеленого контейнера */
@@ -80,8 +79,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: calc(33.33% - 10px); /* Ширина квадрата */
-    height: calc(33.33% - 10px); /* Высота квадрата */
 }
 
 .grid-item {
@@ -94,7 +91,6 @@ header {
     align-items: center;
     font-size: 1.5em; /* Размер шрифта в em */
     border-radius: 20%; /* Скругленные края */
-    aspect-ratio: 1 / 1; /* Квадратное соотношение сторон */
 }
 
 .pagination-container {
