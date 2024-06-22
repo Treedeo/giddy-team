@@ -23,6 +23,7 @@
             <header>GIDDY.BAND</header>
         </div>
         <div class="green-container" id="green-container">
+            <div class="white-container"></div>
             <!-- Контейнеры будут загружены сюда -->
         </div>
     </div>
@@ -31,7 +32,7 @@
         fetch('containers.html')
             .then(response => response.text())
             .then(data => {
-                document.getElementById('green-container').innerHTML = data;
+                document.getElementById('green-container').innerHTML += data;
             });
     </script>
 </body>
