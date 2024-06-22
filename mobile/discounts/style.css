@@ -7,7 +7,29 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
+    box-sizing: border-box;
+    overflow-y: scroll; /* Добавляем вертикальный скроллинг */
+    padding-top: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-bottom: 10px; /* Расстояние между рядами */
+}
+
+.rect {
+    width: 48%;
+    height: 50px;
+    background-color: lightgray;
+    border: 2px solid black;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
     box-sizing: border-box;
 }
