@@ -84,7 +84,7 @@ header {
 
 .sub-container {
     width: calc(50% - 3px); /* Ширина контейнеров чтобы поместились два в ряд */
-    height: calc(30px * 1.6); /* Увеличиваем высоту на 60% */
+    height: calc(30px * 1.6 * 1.6); /* Увеличиваем высоту еще на 60% */
     background-color: lightgray;
     border: 2px solid black;
     border-radius: 15px; /* Скругление краев */
