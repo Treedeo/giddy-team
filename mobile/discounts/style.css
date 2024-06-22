@@ -22,7 +22,7 @@
 }
 
 .rect {
-    width: 45%; /* Увеличиваем ширину на 20% от начального значения */
+    width: calc(50% - 2.5px); /* Добавляем расстояние между колонками */
     height: 104px; /* Увеличиваем высоту на 30% (80px * 1.3) */
     background-color: lightgray;
     border: 2px solid black;
@@ -33,14 +33,6 @@
     font-size: 1em;
     box-sizing: border-box;
     overflow: hidden; /* Чтобы изображения не выходили за границы */
-}
-
-.rect-left {
-    margin-right: 10%;
-}
-
-.rect-right {
-    margin-left: 10%;
 }
 
 .rect img {
