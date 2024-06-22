@@ -72,13 +72,11 @@ header {
     gap: 5px; /* Расстояние между квадратами */
     width: 100%;
     height: 100%;
-    justify-items: center;
-    align-items: center;
+    padding: 5px; /* Внутренний отступ для зеленого контейнера */
+    box-sizing: border-box;
 }
 
 .grid-item {
-    width: calc(100% / 3 - 10px); /* Ширина квадрата с учетом отступов */
-    height: calc(100% / 3 - 10px); /* Высота квадрата с учетом отступов */
     background-color: white;
     border: 2px solid black;
     display: flex;
@@ -86,6 +84,7 @@ header {
     align-items: center;
     font-size: 1.5em; /* Размер шрифта в em */
     border-radius: 20%; /* Скругленные края */
+    aspect-ratio: 1 / 1; /* Квадратное соотношение сторон */
 }
 
 .pagination-container {
