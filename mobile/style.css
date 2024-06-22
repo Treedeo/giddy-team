@@ -79,12 +79,13 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    height: 60px; /* Устанавливаем фиксированную высоту для каждого ряда */
     margin-bottom: 10%; /* Увеличиваем расстояние между строками */
 }
 
 .sub-container {
     width: calc(50% - 10px); /* Делаем два контейнера в ряду с отступами */
-    height: calc(30px + 35%); /* Увеличиваем высоту на 35% */
+    height: 100%; /* Контейнер занимает всю высоту строки */
     background-color: lightgray;
     border: 2px solid black;
     display: flex;
