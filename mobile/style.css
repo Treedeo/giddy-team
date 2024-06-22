@@ -120,13 +120,13 @@ header {
 }
 
 .arrow::before {
-    transform: rotate(45deg);
-    top: -5px; /* Смещаем верхнюю линию */
+    transform: rotate(-45deg);
+    bottom: 5px; /* Смещаем верхнюю линию */
 }
 
 .arrow::after {
-    transform: rotate(-45deg);
-    top: 5px; /* Смещаем нижнюю линию */
+    transform: rotate(45deg);
+    bottom: 5px; /* Смещаем нижнюю линию */
 }
 
 .white-container.expanded .arrow {
