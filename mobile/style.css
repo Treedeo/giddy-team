@@ -71,7 +71,7 @@ header {
 
 .sub-container {
     width: 75%; /* Увеличиваем ширину контейнеров */
-    height: 60px; /* Устанавливаем фиксированную высоту для каждого контейнера */
+    height: calc(60px * 1.3); /* Увеличиваем высоту на 30% */
     background-color: lightgray;
     border: 2px solid black;
     border-radius: 15px; /* Скругление краев */
