@@ -23,9 +23,9 @@
             <header>GIDDY.BAND</header>
         </div>
         <div class="green-container" id="green-container">
-            <div class="white-container"></div>
             <!-- Контейнеры будут загружены сюда -->
         </div>
+        <div class="white-container" id="white-container"></div>
     </div>
     <script>
         // Загружаем содержимое containers.html
@@ -34,6 +34,28 @@
             .then(data => {
                 document.getElementById('green-container').innerHTML += data;
             });
+
+        // Добавляем обработчики событий для белого контейнера
+        const whiteContainer = document.getElementById('white-container');
+        let startY;
+        let isDragging = false;
+
+        whiteContainer.addEventListener('touchstart', (e) => {
+            startY = e.touches[0].clientY;
+            isDragging = true;
+        });
+
+        whiteContainer.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            const currentY = e.touches[0].clientY;
+            if (startY - currentY > 50) {
+                whiteContainer.classList.add('expanded');
+            }
+        });
+
+        whiteContainer.addEventListener('touchend', () => {
+            isDragging = false;
+        });
     </script>
 </body>
 </html>
