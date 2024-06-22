@@ -58,24 +58,24 @@ header {
     width: 100%;
     height: 50vh; /* Высота контейнера в процентах от высоты экрана */
     margin-top: 2vh; /* Отступ от желтого контейнера в процентах */
+    border: 2px solid green; /* Граница для визуализации зеленого контейнера */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, calc(33.33% - 10px)); /* Учитываем 5px между колонками */
+    grid-template-rows: repeat(3, calc(33.33% - 10px)); /* Учитываем 5px между строками */
     gap: 5px; /* Расстояние между квадратами */
     width: 100%;
     height: 100%;
     justify-items: center;
     align-items: center;
-    border: 2px solid green; /* Граница для визуализации зеленого контейнера */
 }
 
 .grid-item {
-    width: calc((100% - 10px) / 3); /* Ширина квадрата с учетом отступов */
-    height: 0;
-    padding-bottom: calc((100% - 10px) / 3); /* Высота квадрата с учетом отступов */
     background-color: white;
     border: 2px solid black;
     display: flex;
