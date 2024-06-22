@@ -58,27 +58,23 @@ header {
     width: 100%;
     height: 50vh; /* Высота контейнера в процентах от высоты экрана */
     margin-top: 2vh; /* Отступ от желтого контейнера в процентах */
-    border: 2px solid green; /* Граница для визуализации зеленого контейнера */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Обрезаем все, что выходит за границы контейнера */
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, calc((100% - 10px) / 3)); /* 3 колонки с учетом 5px между ними */
+    grid-template-rows: repeat(3, calc((100% - 10px) / 3)); /* 3 строки с учетом 5px между ними */
     gap: 5px; /* Расстояние между квадратами */
-    width: 95%; /* Учитываем 5% на отступы */
-    height: 95%; /* Учитываем 5% на отступы */
+    width: 100%;
+    height: 100%;
     justify-items: center;
     align-items: center;
+    border: 2px solid green; /* Граница для визуализации зеленого контейнера */
 }
 
 .grid-item {
-    width: 100%; /* Ширина квадрата */
-    padding-bottom: 100%; /* Высота квадрата равна его ширине */
+    width: 100%;
+    height: 100%;
     background-color: white;
     border: 2px solid black;
     display: flex;
@@ -86,14 +82,6 @@ header {
     align-items: center;
     font-size: 1.5em; /* Размер шрифта в em */
     border-radius: 20%; /* Скругленные края */
-    position: relative;
-}
-
-.grid-item span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .pagination-container {
@@ -116,7 +104,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: auto; /* Устанавливаем ширину в auto */
+    width: 100%;
+    height: 100%; /* Обеспечивает, что точки занимают всю высоту контейнера */
 }
 
 .swiper-pagination-bullet {
@@ -138,31 +127,24 @@ header {
     border: 1px solid black; /* Граница для визуализации */
 }
 
-.discount-value {
-    font-size: 2.3em; /* Увеличено на 15% */
-    margin: 0 2vw;
-}
-
-.arrow-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2vw; /* Расстояние между кнопками и текстом */
-}
-
-.arrow-left,
-.arrow-right {
-    font-size: 1.5em; /* Вернули размер шрифта */
+.discount-container .arrow-left,
+.discount-container .arrow-right {
+    font-size: 1.5em; /* Размер шрифта в em */
     border: 2px solid black;
     background: white;
     color: black;
     border-radius: 50%;
-    width: 10vw; /* Вернули размер кнопок */
-    height: 10vw; /* Вернули размер кнопок */
+    width: 10vw; /* Ширина кнопки в процентах от ширины экрана */
+    height: 10vw; /* Высота кнопки в процентах от ширины экрана */
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.discount-container .discount-value {
+    font-size: 2em; /* Увеличено на 20% в em */
+    margin: 0 2vw;
 }
 
 .buy-container {
@@ -176,13 +158,13 @@ header {
     border: 1px solid black; /* Граница для визуализации */
 }
 
-.buy-button {
-    font-size: 1.5em; /* Вернули размер шрифта */
+.buy-container .buy-button {
+    font-size: 1.5em; /* Размер шрифта в em */
     border: 2px solid black;
     background: black;
     color: white;
     padding: 1vh 2vw; /* Padding в процентах */
     border-radius: 30px; /* Скругленные края */
     cursor: pointer;
-    width: 70vw; /* Вернули размер кнопки */
+    width: 70vw; /* Уменьшено на 30% */
 }
