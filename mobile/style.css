@@ -80,6 +80,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: calc(33.33% - 10px); /* Ширина квадрата */
+    height: calc(33.33% - 10px); /* Высота квадрата */
 }
 
 .grid-item {
