@@ -108,27 +108,32 @@ header {
     justify-content: center;
     align-items: center;
     opacity: 1;
-    transition: opacity 0.5s; /* Плавный переход для прозрачности */
+    transition: opacity 0.5s, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Плавный переход для прозрачности и перемещения */
 }
 
-.arrow::before, .arrow::after {
+.arrow::before {
     content: '';
     position: absolute;
     width: 15px;
     height: 2px;
     background-color: black;
-}
-
-.arrow::before {
     transform: rotate(45deg);
+    top: 5px; /* Смещаем верхнюю линию */
 }
 
 .arrow::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: black;
     transform: rotate(-45deg);
+    top: 5px; /* Смещаем нижнюю линию */
 }
 
 .white-container.expanded .arrow {
     opacity: 0; /* Стрелка исчезает при развернутом контейнере */
+    transform: translateY(-100%); /* Перемещаем стрелку вверх */
 }
 
 .row {
