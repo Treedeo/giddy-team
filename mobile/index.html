@@ -22,7 +22,12 @@
             </div>
             <header>GIDDY.BAND</header>
         </div>
-        <div class="green-container" id="green-container">
+        <div class="green-container" id="menu-container">
+            <div class="button" id="ads-button">ОБЪЯВЛЕНИЯ</div>
+            <div class="button" id="discounts-button">СКИДКИ</div>
+            <div class="button" id="about-button">О НАС</div>
+        </div>
+        <div class="scroll-container" id="discounts-container">
             <!-- Контейнеры будут загружены сюда -->
         </div>
         <div class="white-container" id="white-container">
@@ -34,11 +39,15 @@
         fetch('containers.html')
             .then(response => response.text())
             .then(data => {
-                document.getElementById('green-container').innerHTML += data;
+                document.getElementById('discounts-container').innerHTML += data;
             });
 
         // Добавляем обработчики событий для белого контейнера
         const whiteContainer = document.getElementById('white-container');
+        const discountsButton = document.getElementById('discounts-button');
+        const discountsContainer = document.getElementById('discounts-container');
+        const menuContainer = document.getElementById('menu-container');
+        
         let startY;
         let isDragging = false;
 
@@ -63,11 +72,4 @@
 
         whiteContainer.addEventListener('click', () => {
             if (whiteContainer.classList.contains('expanded')) {
-                whiteContainer.classList.remove('expanded');
-            } else {
-                whiteContainer.classList.add('expanded');
-            }
-        });
-    </script>
-</body>
-</html>
+                whiteContainer.classList.remove('
