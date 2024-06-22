@@ -12,34 +12,40 @@
             <header>GIDDY.BAND</header>
         </div>
         <div class="swiper-container">
-            <div class="grid-container swiper-wrapper">
-                <div class="grid-item swiper-slide">1</div>
-                <div class="grid-item swiper-slide">2</div>
-                <div class="grid-item swiper-slide">3</div>
-                <div class="grid-item swiper-slide">4</div>
-                <div class="grid-item swiper-slide">5</div>
-                <div class="grid-item swiper-slide">6</div>
-                <div class="grid-item swiper-slide">7</div>
-                <div class="grid-item swiper-slide">8</div>
-                <div class="grid-item swiper-slide">9</div>
+            <div class="grid-container">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+                <div class="grid-item">7</div>
+                <div class="grid-item">8</div>
+                <div class="grid-item">9</div>
             </div>
-        </div>
-        <div class="pagination-container">
-            <div class="swiper-pagination"></div>
         </div>
         <div class="discount-container">
-            <div class="arrow-container">
-                <div class="arrow-left">&lt;</div>
-                <div class="discount-value">5%</div>
-                <div class="arrow-right">&gt;</div>
-            </div>
+            <button class="discount-button" onclick="changeDiscount()">5%</button>
         </div>
         <div class="buy-container">
-            <button class="buy-button">10 COM</button>
+            <button class="buy-button" id="buy-button">10 COM</button>
         </div>
         <div>V-002</div>
     </div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script>
+        let discount = 5;
+        let prices = {
+            5: '10 COM',
+            10: '20 COM',
+            15: '30 COM'
+        };
+
+        function changeDiscount() {
+            discount += 5;
+            if (discount > 15) discount = 5;
+            document.querySelector('.discount-button').textContent = discount + '%';
+            document.getElementById('buy-button').textContent = prices[discount];
+        }
+    </script>
 </body>
 </html>
