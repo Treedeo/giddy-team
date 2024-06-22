@@ -65,26 +65,26 @@ header {
 .swiper-wrapper {
     display: flex;
     flex-direction: column;
+    height: auto;
 }
 
 .swiper-slide {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
+    width: 100%;
 }
 
 .row {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: calc(30% + 35px + 10%); /* Высота строки с учетом увеличенной высоты и отступов */
     margin-bottom: 10%; /* Увеличиваем расстояние между строками */
 }
 
 .sub-container {
     width: calc(50% - 10px); /* Делаем два контейнера в ряду с отступами */
-    height: 100%;
+    height: calc(30px + 35%); /* Увеличиваем высоту на 35% */
     background-color: lightgray;
     border: 2px solid black;
     display: flex;
