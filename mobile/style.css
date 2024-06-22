@@ -100,6 +100,7 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100%; /* Обеспечивает, что точки занимают всю высоту контейнера */
 }
 
 .swiper-pagination-bullet {
