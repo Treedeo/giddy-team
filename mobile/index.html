@@ -5,26 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giddy Band</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
     <div class="container">
         <div class="header-container">
             <header>GIDDY.BAND</header>
         </div>
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><div class="grid-item">1</div></div>
-                <div class="swiper-slide"><div class="grid-item">2</div></div>
-                <div class="swiper-slide"><div class="grid-item">3</div></div>
-                <div class="swiper-slide"><div class="grid-item">4</div></div>
-                <div class="swiper-slide"><div class="grid-item">5</div></div>
-                <div class="swiper-slide"><div class="grid-item">6</div></div>
-                <div class="swiper-slide"><div class="grid-item">7</div></div>
-                <div class="swiper-slide"><div class="grid-item">8</div></div>
-                <div class="swiper-slide"><div class="grid-item">9</div></div>
-            </div>
-        </div>
+        <div class="green-container"></div>
         <div class="pagination-container">
             <button class="pagination-button">Хочешь скидку больше нажми на нее</button>
         </div>
@@ -36,7 +23,6 @@
         </div>
         <div>V-002</div>
     </div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         let discount = 5;
         let prices = {
@@ -51,13 +37,6 @@
             document.querySelector('.discount-button').textContent = discount + '%';
             document.getElementById('buy-button').textContent = prices[discount];
         }
-
-        const swiper = new Swiper('.swiper-container', {
-            direction: 'vertical',
-            slidesPerView: 3,
-            spaceBetween: 5,
-            mousewheel: true,
-        });
     </script>
 </body>
 </html>
