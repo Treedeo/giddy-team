@@ -70,7 +70,7 @@ header {
 }
 
 .sub-container {
-    width: calc(50% - 7px + 60%); /* Увеличиваем ширину еще на 30% */
+    width: calc(50% - 7px + 90%); /* Увеличиваем ширину еще на 30% */
     height: 60px; /* Устанавливаем фиксированную высоту для каждого контейнера */
     background-color: lightgray;
     border: 2px solid black;
