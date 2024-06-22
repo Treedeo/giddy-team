@@ -18,12 +18,12 @@
     display: flex;
     justify-content: space-between;
     width: 90%;
-    margin-bottom: 10px; /* Расстояние между рядами */
+    margin-bottom: 5px; /* Межстрочное расстояние */
 }
 
 .rect {
-    width: 48%;
-    height: 50px;
+    width: calc(50% - 2.5px); /* Ширина с учетом расстояния между колонками */
+    height: 80px; /* Увеличиваем высоту на 60% (50px * 1.6) */
     background-color: lightgray;
     border: 2px solid black;
     border-radius: 15px;
