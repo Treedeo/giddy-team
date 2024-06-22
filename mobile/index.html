@@ -58,6 +58,12 @@
         whiteContainer.addEventListener('touchend', () => {
             isDragging = false;
         });
+
+        whiteContainer.addEventListener('click', () => {
+            if (whiteContainer.classList.contains('expanded')) {
+                whiteContainer.classList.remove('expanded');
+            }
+        });
     </script>
 </body>
 </html>
