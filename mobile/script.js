@@ -44,14 +44,6 @@ function adjustContainerSize() {
     // Устанавливаем размер контейнера в зависимости от размера окна
     container.style.width = `${width}px`;
     container.style.height = `${height}px`;
-
-    // Масштабирование контейнера
-    const scaleX = width / 375; // 375 - базовая ширина (например, ширина iPhone 8)
-    const scaleY = height / 667; // 667 - базовая высота (например, высота iPhone 8)
-    const scale = Math.min(scaleX, scaleY);
-
-    container.style.transform = `scale(${scale})`;
-    container.style.transformOrigin = 'top left';
 }
 
 // Изначальная настройка контейнера при загрузке страницы
