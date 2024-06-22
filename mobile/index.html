@@ -12,16 +12,18 @@
         <div class="header-container">
             <header>GIDDY.BAND</header>
         </div>
-        <div class="green-container swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><div class="rectangle">1</div></div>
-                <div class="swiper-slide"><div class="rectangle">2</div></div>
-                <div class="swiper-slide"><div class="rectangle">3</div></div>
-                <div class="swiper-slide"><div class="rectangle">4</div></div>
-                <div class="swiper-slide"><div class="rectangle">5</div></div>
-                <div class="swiper-slide"><div class="rectangle">6</div></div>
-                <div class="swiper-slide"><div class="rectangle">7</div></div>
-                <div class="swiper-slide"><div class="rectangle">8</div></div>
+        <div class="green-container">
+            <div class="inner-container">
+                <div class="rectangle">1</div>
+                <div class="rectangle">2</div>
+                <div class="rectangle">3</div>
+                <div class="rectangle">4</div>
+            </div>
+            <div class="inner-container">
+                <div class="rectangle">5</div>
+                <div class="rectangle">6</div>
+                <div class="rectangle">7</div>
+                <div class="rectangle">8</div>
             </div>
         </div>
         <div class="pagination-container">
@@ -35,7 +37,6 @@
         </div>
         <div>V-002</div>
     </div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         let discount = 5;
         let prices = {
@@ -50,13 +51,6 @@
             document.querySelector('.discount-button').textContent = discount + '%';
             document.getElementById('buy-button').textContent = prices[discount];
         }
-
-        const swiper = new Swiper('.swiper-container', {
-            direction: 'vertical',
-            slidesPerView: 3, // Видимых слайдов
-            spaceBetween: 5, // Расстояние между слайдами
-            mousewheel: true,
-        });
     </script>
 </body>
 </html>
