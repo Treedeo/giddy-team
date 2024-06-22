@@ -88,7 +88,7 @@ header {
     bottom: 0; /* Размещаем внизу */
     left: 0; /* Выравниваем по левому краю */
     z-index: 2; /* Применяем слой для верхнего контейнера */
-    transition: height 0.3s ease-in-out; /* Плавный переход с ускорением и замедлением */
+    transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Плавный переход с ускорением и замедлением */
 }
 
 .white-container.expanded {
