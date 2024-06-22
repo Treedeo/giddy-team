@@ -53,19 +53,18 @@ header {
 .menu-icon {
     width: 30px;
     height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2px;
     cursor: pointer;
 }
 
 .menu-icon div {
-    width: 25px;
-    height: 4px;
+    width: 6px;
+    height: 6px;
     background-color: black;
-    border-radius: 2px; /* Скругление краев */
-    margin: 2px 0; /* Уменьшаем расстояние между линиями */
+    border-radius: 50%;
 }
 
 .green-container {
