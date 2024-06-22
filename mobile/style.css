@@ -94,9 +94,14 @@ header {
     justify-content: center;
     align-items: center;
     border: 1px solid black; /* Граница для визуализации */
+    position: relative; /* Обеспечивает, что точки навигации будут привязаны к этому контейнеру */
 }
 
 .swiper-pagination {
+    position: absolute;
+    top: 50%; /* Центрирование по вертикали */
+    left: 50%; /* Центрирование по горизонтали */
+    transform: translate(-50%, -50%); /* Корректировка центрирования */
     display: flex;
     justify-content: center;
     align-items: center;
