@@ -62,12 +62,13 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden; /* Обрезаем все, что выходит за границы контейнера */
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, calc(33.33% - 10px)); /* Учитываем 5px между колонками */
-    grid-template-rows: repeat(3, calc(33.33% - 10px)); /* Учитываем 5px между строками */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 5px; /* Расстояние между квадратами */
     width: 100%;
     height: 100%;
@@ -76,6 +77,8 @@ header {
 }
 
 .grid-item {
+    width: calc((100% - 10px) / 3); /* Ширина квадрата с учетом отступов */
+    height: calc((100% - 10px) / 3); /* Высота квадрата с учетом отступов */
     background-color: white;
     border: 2px solid black;
     display: flex;
