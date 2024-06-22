@@ -50,6 +50,8 @@
             const currentY = e.touches[0].clientY;
             if (startY - currentY > 50) {
                 whiteContainer.classList.add('expanded');
+            } else if (currentY - startY > 50) {
+                whiteContainer.classList.remove('expanded');
             }
         });
 
