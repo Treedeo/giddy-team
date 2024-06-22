@@ -141,13 +141,13 @@ header {
 
 .arrow-left,
 .arrow-right {
-    font-size: 1.3em; /* Уменьшено на 15% */
+    font-size: 1.5em; /* Вернули размер шрифта */
     border: 2px solid black;
     background: white;
     color: black;
     border-radius: 50%;
-    width: 8vw; /* Ширина кнопки в процентах от ширины экрана */
-    height: 8vw; /* Высота кнопки в процентах от ширины экрана */
+    width: 10vw; /* Вернули размер кнопок */
+    height: 10vw; /* Вернули размер кнопок */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,12 +166,12 @@ header {
 }
 
 .buy-button {
-    font-size: 1.5em; /* Размер шрифта в em */
+    font-size: 1.5em; /* Вернули размер шрифта */
     border: 2px solid black;
     background: black;
     color: white;
     padding: 1vh 2vw; /* Padding в процентах */
     border-radius: 30px; /* Скругленные края */
     cursor: pointer;
-    width: 70vw; /* Уменьшено на 30% */
+    width: 70vw; /* Вернули размер кнопки */
 }
