@@ -70,9 +70,8 @@ header {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 5px; /* Расстояние между квадратами */
-    width: 100%;
-    height: 100%;
-    padding: 5px; /* Внутренний отступ для зеленого контейнера */
+    width: calc(100% - 10px); /* Учитываем gap */
+    height: calc(100% - 10px); /* Учитываем gap */
     box-sizing: border-box;
 }
 
