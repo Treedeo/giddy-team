@@ -59,18 +59,20 @@ header {
     height: 40vh;
     margin-top: 2vh;
     border: 2px solid green;
+    overflow: hidden; /* Обрезаем все, что выходит за границы контейнера */
+}
+
+.swiper-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent;
+    height: auto;
 }
 
 .row {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: calc(100% / 3 - 10px); /* Делим высоту контейнера на 3 ряда с учетом отступов */
+    height: calc(100% / 4 - 10px); /* Делим высоту контейнера на 4 ряда с учетом отступов */
 }
 
 .sub-container {
