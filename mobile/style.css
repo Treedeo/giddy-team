@@ -73,6 +73,17 @@ header {
     margin-top: 2vh;
     border: 2px solid green;
     overflow-y: scroll; /* Добавляем вертикальный скроллинг */
+    position: relative;
+}
+
+.white-container {
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    border-radius: 15px;
+    position: absolute;
+    top: -35px; /* Размещаем сверху зеленого контейнера */
+    left: 0;
 }
 
 .row {
