@@ -85,6 +85,7 @@ header {
     height: 60px; /* Устанавливаем фиксированную высоту для каждого контейнера */
     background-color: lightgray;
     border: 2px solid black;
+    border-radius: 15px; /* Скругление краев */
     display: flex;
     justify-content: center;
     align-items: center;
