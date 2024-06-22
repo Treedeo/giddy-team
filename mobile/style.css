@@ -143,7 +143,7 @@ header {
 }
 
 .discount-container .discount-value {
-    font-size: 2em; /* Увеличено на 20% в em */
+    font-size: 2.3em; /* Увеличено на 15% */
     margin: 0 2vw;
 }
 
