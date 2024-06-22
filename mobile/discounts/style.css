@@ -1,35 +1,49 @@
-@import url('../css/global.css');
-
-.green-container {
-    width: 100%;
-    height: 100%;
-    border: 2px solid green;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
-    box-sizing: border-box;
-    overflow-y: scroll; /* Добавляем вертикальный скроллинг */
-    padding-top: 20px;
-}
-
-.row {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    margin-bottom: 5px; /* Межстрочное расстояние */
-}
-
-.rect {
-    width: calc(50% - 2.5px); /* Ширина с учетом расстояния между колонками */
-    height: 80px; /* Увеличиваем высоту на 60% (50px * 1.6) */
-    background-color: lightgray;
-    border: 2px solid black;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1em;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скидки</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="green-container" id="discounts-container">
+            <!-- Контент раздела "Скидки" -->
+            <div class="row">
+                <div class="rect"><img src="image1.jpg" alt="Image 1"></div>
+                <div class="rect"><img src="image2.jpg" alt="Image 2"></div>
+            </div>
+            <div class="row">
+                <div class="rect"><img src="image3.jpg" alt="Image 3"></div>
+                <div class="rect"><img src="image4.jpg" alt="Image 4"></div>
+            </div>
+            <div class="row">
+                <div class="rect"><img src="image5.jpg" alt="Image 5"></div>
+                <div class="rect"><img src="image6.jpg" alt="Image 6"></div>
+            </div>
+            <div class="row">
+                <div class="rect"><img src="image7.jpg" alt="Image 7"></div>
+                <div class="rect"><img src="image8.jpg" alt="Image 8"></div>
+            </div>
+            <div class="row">
+                <div class="rect"><img src="image9.jpg" alt="Image 9"></div>
+                <div class="rect"><img src="image10.jpg" alt="Image 10"></div>
+            </div>
+            <div class="row">
+                <div class="rect"><img src="image11.jpg" alt="Image 11"></div>
+                <div class="rect"><img src="image12.jpg" alt="Image 12"></div>
+            </div>
+            <div class="row">
+                <div class="rect"><img src="image13.jpg" alt="Image 13"></div>
+                <div class="rect"><img src="image14.jpg" alt="Image 14"></div>
+            </div>
+            <div class="row">
+                <div class="rect"><img src="image15.jpg" alt="Image 15"></div>
+                <div class="rect"><img src="image16.jpg" alt="Image 16"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
