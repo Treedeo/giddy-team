@@ -87,11 +87,34 @@ header {
     aspect-ratio: 1 / 1; /* Квадратное соотношение сторон */
 }
 
+.pagination-container {
+    margin-top: 2vh; /* Отступ от зеленого контейнера в процентах */
+    background-color: pink; /* Розовый цвет контейнера */
+    width: 100%;
+    height: 10vh; /* Высота контейнера в процентах от высоты экрана */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black; /* Граница для визуализации */
+}
+
+.pagination-button {
+    font-size: 1em;
+    border: 2px solid black;
+    background: pink;
+    color: black;
+    padding: 1vh 2vw; /* Padding в процентах */
+    border-radius: 30px; /* Скругленные края */
+    cursor: pointer;
+    width: 70vw; /* Ширина кнопки */
+    text-align: center;
+}
+
 .discount-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2vh; /* Отступ от зеленого контейнера в процентах */
+    margin-top: 2vh; /* Отступ от розового контейнера в процентах */
     background-color: orange; /* Оранжевый цвет контейнера */
     width: 100%;
     height: 10vh; /* Высота контейнера в процентах от высоты экрана */
@@ -106,7 +129,7 @@ header {
     padding: 1vh 2vw; /* Padding в процентах */
     border-radius: 30px; /* Скругленные края */
     cursor: pointer;
-    width: 50vw;
+    width: 70vw; /* Ширина кнопки */
     text-align: center;
 }
 
