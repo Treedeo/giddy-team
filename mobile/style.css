@@ -72,7 +72,7 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: calc(100% / 4 - 10px); /* Делим высоту контейнера на 4 ряда с учетом отступов */
+    height: calc(100% / 5 - 10px); /* Делим высоту контейнера на 5 рядов с учетом отступов */
 }
 
 .sub-container {
