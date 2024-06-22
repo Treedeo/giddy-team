@@ -83,7 +83,7 @@ header {
 }
 
 .pagination-container {
-    margin-top: 2vh;
+    margin-top: calc(2vh * 1.2); /* Опускаем на 20% */
     background-color: pink;
     width: 100%;
     height: 10vh;
@@ -106,10 +106,10 @@ header {
 }
 
 .discount-container {
+    margin-top: calc(2vh * 1.2); /* Опускаем на 20% */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2vh;
     background-color: orange;
     width: 100%;
     height: 10vh;
