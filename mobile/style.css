@@ -65,7 +65,7 @@ header {
     overflow: hidden; /* Обрезаем все, что выходит за границы контейнера */
 }
 
-.grid-container {
+.swiper-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -73,6 +73,12 @@ header {
     width: calc(100% - 10px); /* Учитываем gap */
     height: calc(100% - 10px); /* Учитываем gap */
     box-sizing: border-box;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid-item {
