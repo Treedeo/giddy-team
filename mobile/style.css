@@ -60,31 +60,23 @@ header {
     margin-top: 2vh; /* Отступ от желтого контейнера в процентах */
     border: 2px solid green; /* Граница для визуализации зеленого контейнера */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
     overflow: hidden; /* Обрезаем все, что выходит за границы контейнера */
 }
 
-.swiper-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 прямоугольника в ряд */
-    grid-template-rows: repeat(6, 1fr); /* 6 рядов прямоугольников */
-    gap: 5px; /* Расстояние между прямоугольниками */
-    width: 100%;
-    height: 200%; /* Высота для отображения всех прямоугольников */
-    padding: 5px; /* Внутренний отступ для зеленого контейнера */
-    box-sizing: border-box;
-}
-
-.swiper-slide {
+.inner-container {
+    flex: 1;
+    border: 2px solid lime; /* Яркая салатовая граница */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2px;
 }
 
 .rectangle {
-    width: 100%;
-    height: 100%;
+    width: calc(50% - 5px); /* Ширина прямоугольников */
+    height: calc(33.33% - 5px); /* Высота прямоугольников */
     background-color: lightgray;
     border: 2px solid black;
     border-radius: 0; /* Убираем скругленные края */
@@ -92,6 +84,7 @@ header {
     justify-content: center;
     align-items: center;
     font-size: 1em; /* Размер шрифта */
+    margin-bottom: 5px; /* Отступ между прямоугольниками по вертикали */
 }
 
 .pagination-container {
