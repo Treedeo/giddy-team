@@ -73,9 +73,30 @@ header {
     height: calc(100% - calc(30px * 1.6) - 2vh); /* Высота на весь экран за вычетом высоты белого контейнера и верхнего отступа */
     margin-top: 2vh;
     border: 2px solid green;
-    overflow-y: scroll; /* Добавляем вертикальный скроллинг */
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.button {
+    width: 80%;
+    height: 50px;
+    background-color: lightgray;
+    border: 2px solid black;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.hidden {
+    display: none;
 }
 
 .white-container {
@@ -152,4 +173,13 @@ header {
     align-items: center;
     font-size: 1em;
     margin: 3px; /* Устанавливаем расстояние между блоками */
+}
+
+.scroll-container {
+    width: 100%;
+    height: calc(100% - 60px);
+    overflow-y: scroll;
+    display: none;
+    flex-direction: column;
+    align-items: center;
 }
