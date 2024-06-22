@@ -72,8 +72,8 @@ header {
 }
 
 .grid-item {
-    width: 30%; /* Ширина квадрата в процентах */
-    height: 30%; /* Высота квадрата в процентах */
+    width: calc(33.33% - 4%); /* Ширина квадрата с учетом отступов */
+    height: calc(33.33% - 4%); /* Высота квадрата с учетом отступов */
     background-color: white;
     border: 2px solid black;
     display: flex;
