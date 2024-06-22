@@ -56,7 +56,7 @@ header {
 
 .green-container {
     width: 100%;
-    height: calc(40vh * 1.2 * 1.2); /* Увеличиваем высоту еще на 20% */
+    height: calc(40vh * 1.2 * 1.2 * 1.3); /* Увеличиваем высоту еще на 30% */
     margin-top: 2vh;
     border: 2px solid green;
     overflow-y: scroll; /* Добавляем вертикальный скроллинг */
@@ -83,7 +83,7 @@ header {
 }
 
 .pagination-container {
-    margin-top: calc(2vh * 1.2); /* Опускаем на 20% */
+    margin-top: calc(2vh * 1.2 * 1.2); /* Опускаем еще на 20% */
     background-color: pink;
     width: 100%;
     height: 10vh;
@@ -106,7 +106,7 @@ header {
 }
 
 .discount-container {
-    margin-top: calc(2vh * 1.2); /* Опускаем на 20% */
+    margin-top: calc(2vh * 1.2 * 1.2); /* Опускаем еще на 20% */
     display: flex;
     justify-content: center;
     align-items: center;
