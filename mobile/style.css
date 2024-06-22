@@ -38,20 +38,32 @@ body {
     height: calc(10vh * 0.8 * 0.8 * 0.7); /* Уменьшаем высоту на 30% */
     margin-top: 2vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: yellow;
     border: 1px solid black;
+    padding: 0 10px;
 }
 
 header {
-    font-size: 2em;
-    line-height: 1em;
+    font-size: 1.6em; /* Уменьшаем размер шрифта на 20% */
     font-weight: bold;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 30px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    height: 100%;
+    cursor: pointer;
+}
+
+.menu-icon div {
+    width: 25px;
+    height: 4px;
+    background-color: black;
 }
 
 .green-container {
