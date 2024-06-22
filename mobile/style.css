@@ -68,11 +68,15 @@ header {
 
 .rectangle {
     width: calc(50% - 5px); /* Ширина прямоугольников */
-    height: 30px; /* Высота прямоугольников */
+    height: calc((40vh - 20px) / 4); /* Высота прямоугольников */
     margin: 2.5px; /* Расстояние между прямоугольниками */
     background-color: lightgray;
     border: 2px solid black;
     border-radius: 15px; /* Скругленные края */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em; /* Размер шрифта */
 }
 
 .pagination-container {
