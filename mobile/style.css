@@ -68,15 +68,42 @@ header {
 
 .rectangle {
     width: calc(50% - 5px); /* Ширина прямоугольников */
-    height: calc((40vh - 20px) / 4); /* Высота прямоугольников */
+    height: calc((40vh - 25px) / 6); /* Высота прямоугольников */
     margin: 2.5px; /* Расстояние между прямоугольниками */
     background-color: lightgray;
     border: 2px solid black;
-    border-radius: 15px; /* Скругленные края */
+    border-radius: 30%; /* Скругленные края */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5em; /* Размер шрифта */
+}
+
+.swiper-container {
+    width: 100%;
+    height: 40vh; /* Высота контейнера в процентах от высоты экрана */
+    margin-top: 2vh; /* Отступ от желтого контейнера в процентах */
+    border: 2px solid green; /* Граница для визуализации зеленого контейнера */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Обрезаем все, что выходит за границы контейнера */
+}
+
+.swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 прямоугольника в ряд */
+    gap: 5px; /* Расстояние между прямоугольниками */
+    width: 100%;
+    height: 100%;
+    padding: 5px; /* Внутренний отступ для зеленого контейнера */
+    box-sizing: border-box;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pagination-container {
