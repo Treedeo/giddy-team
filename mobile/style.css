@@ -64,6 +64,8 @@ header {
     width: 25px;
     height: 4px;
     background-color: black;
+    border-radius: 2px; /* Скругление краев */
+    margin: 2px 0; /* Уменьшаем расстояние между линиями */
 }
 
 .green-container {
