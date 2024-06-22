@@ -81,7 +81,7 @@ header {
 }
 
 .sub-container {
-    width: calc(20% - 10px); /* Делаем пять контейнеров в ряду с отступами */
+    width: calc(50% - 10px); /* Делаем два контейнера в ряду с отступами */
     height: 60px; /* Устанавливаем фиксированную высоту для каждого контейнера */
     background-color: lightgray;
     border: 2px solid black;
