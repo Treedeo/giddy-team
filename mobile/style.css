@@ -70,15 +70,15 @@ header {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 5px; /* Расстояние между квадратами */
-    width: 95%; /* Учитываем 5% на отступы */
-    height: 95%; /* Учитываем 5% на отступы */
+    width: 100%;
+    height: 100%;
     justify-items: center;
     align-items: center;
 }
 
 .grid-item {
-    width: 100%; /* Ширина квадрата */
-    padding-bottom: 100%; /* Высота квадрата равна его ширине */
+    width: calc(100% / 3 - 10px); /* Ширина квадрата с учетом отступов */
+    height: calc(100% / 3 - 10px); /* Высота квадрата с учетом отступов */
     background-color: white;
     border: 2px solid black;
     display: flex;
@@ -86,14 +86,6 @@ header {
     align-items: center;
     font-size: 1.5em; /* Размер шрифта в em */
     border-radius: 20%; /* Скругленные края */
-    position: relative;
-}
-
-.grid-item span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .pagination-container {
