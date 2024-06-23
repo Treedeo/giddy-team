@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const fixedElementHeader = document.querySelector('.fixed-element-header');
     const loginField = document.getElementById('login');
     const passwordField = document.getElementById('password');
+    const emailField = document.getElementById('email');
+    const registration = document.getElementById('registration');
     let startY;
 
     fixedElement.addEventListener('touchstart', function(event) {
@@ -21,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     fixedElement.addEventListener('click', function(event) {
-        if (event.target !== loginField && event.target !== passwordField) {
+        if (event.target !== loginField && event.target !== passwordField && event.target !== registration) {
             fixedElement.classList.toggle('open');
             if (fixedElement.classList.contains('open')) {
                 showFields();
@@ -29,6 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 hideFields();
             }
         }
+    });
+
+    registration.addEventListener('click', function() {
+        emailField.style.display = 'block';
+        emailField.classList.add('show');
     });
 
     function showFields() {
@@ -41,5 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
         fixedElementHeader.style.opacity = 0;
         loginField.classList.remove('show');
         passwordField.classList.remove('show');
+        emailField.style.display = 'none';
+        emailField.classList.remove('show');
     }
 });
