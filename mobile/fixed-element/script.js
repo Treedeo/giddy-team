@@ -54,6 +54,8 @@ document.addEventListener('DOMContentLoaded', function() {
     login.addEventListener('click', function(event) {
         event.stopPropagation(); // Остановить всплытие события
         console.log('Login button clicked'); // Debugging
+        emailField.style.display = 'none';
+        emailField.classList.remove('show');
     });
 
     document.addEventListener('click', function(event) {
