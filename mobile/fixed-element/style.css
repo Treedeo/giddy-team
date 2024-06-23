@@ -78,3 +78,9 @@ input.show {
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease; /* Плавная анимация */
 }
+
+#email.show {
+    display: block; /* Показать элемент */
+    opacity: 1;
+    transform: translateY(0); /* Конечная позиция */
+}
