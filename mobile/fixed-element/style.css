@@ -1,0 +1,8 @@
+.fixed-element {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px; /* Вы можете изменить высоту по своему усмотрению */
+    background-color: red;
+    z-index: 1000; /* Высокий индекс слоя, чтобы элемент был поверх всех разделов */
+}
