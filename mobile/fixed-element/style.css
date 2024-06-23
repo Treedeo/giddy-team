@@ -15,7 +15,7 @@
     align-items: flex-start; /* Выравнивание по верхнему краю */
     justify-content: center;
     flex-direction: column;
-    padding-top: 70%; /* Отступ сверху на 70% */
+    padding-top: 10px; /* Отступ сверху */
 }
 
 .fixed-element.open {
