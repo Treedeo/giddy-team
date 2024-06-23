@@ -72,6 +72,11 @@ input.show {
     transform: translateY(0); /* Конечная позиция */
 }
 
+input.hide {
+    opacity: 0;
+    transform: translateY(20px); /* Начальная позиция ниже */
+}
+
 #email {
     display: none; /* Изначально скрытое поле для email */
     opacity: 0;
@@ -83,4 +88,10 @@ input.show {
     display: block; /* Показать элемент */
     opacity: 1;
     transform: translateY(0); /* Конечная позиция */
+}
+
+#email.hide {
+    opacity: 0;
+    transform: translateY(20px); /* Начальная позиция ниже */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Плавная анимация */
 }
