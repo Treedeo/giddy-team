@@ -35,7 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     registration.addEventListener('click', function() {
         emailField.style.display = 'block';
-        emailField.classList.add('show');
+        setTimeout(() => {
+            emailField.style.opacity = 1;
+            emailField.style.transform = 'translateY(0)';
+        }, 0);
     });
 
     function showFields() {
@@ -49,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         loginField.classList.remove('show');
         passwordField.classList.remove('show');
         emailField.style.display = 'none';
-        emailField.classList.remove('show');
+        emailField.style.opacity = 0;
+        emailField.style.transform = 'translateY(20px)';
     }
 });
