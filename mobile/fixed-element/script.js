@@ -8,6 +8,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const login = document.getElementById('login');
     let startY;
 
+    function showFields() {
+        fixedElementHeader.style.opacity = 1;
+        loginField.classList.add('show');
+        passwordField.classList.add('show');
+    }
+
+    function hideFields() {
+        fixedElementHeader.style.opacity = 0;
+        loginField.classList.remove('show');
+        passwordField.classList.remove('show');
+        emailField.style.display = 'none';
+        emailField.classList.remove('show');
+    }
+
     fixedElement.addEventListener('touchstart', function(event) {
         startY = event.touches[0].clientY;
     });
@@ -34,20 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
     login.addEventListener('click', function(event) {
         event.stopPropagation(); // Остановить всплытие события
     });
-
-    function showFields() {
-        fixedElementHeader.style.opacity = 1;
-        loginField.classList.add('show');
-        passwordField.classList.add('show');
-    }
-
-    function hideFields() {
-        fixedElementHeader.style.opacity = 0;
-        loginField.classList.remove('show');
-        passwordField.classList.remove('show');
-        emailField.style.display = 'none';
-        emailField.classList.remove('show');
-    }
 
     document.addEventListener('click', function(event) {
         if (!fixedElement.contains(event.target) && fixedElement.classList.contains('open')) {
