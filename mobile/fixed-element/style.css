@@ -15,7 +15,7 @@
     align-items: flex-start; /* Выравнивание по верхнему краю */
     justify-content: flex-start; /* Выравнивание по верхнему краю */
     flex-direction: column;
-    padding-top: 4%; /* Отступ сверху */
+    padding-top: 8%; /* Отступ сверху */
 }
 
 .fixed-element.open {
