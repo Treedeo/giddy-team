@@ -3,28 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
-    <link rel="stylesheet" href="../css/global.css">
+    <title>Main Page</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../fixed-element/style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="green-container" id="menu-container">
-            <div class="title">GIDDY.TEAM</div>
-            <a href="../ads/index.html" class="button">ОБЪЯВЛЕНИЯ</a>
-            <a href="../discounts/index.html" class="button">СКИДКИ</a>
-            <a href="../about/index.html" class="button">О НАС 1</a>
-        </div>
-    </div>
+    <!-- Main content here -->
     <div class="fixed-element" id="fixed-element">
         <div class="fixed-element-header">
-            <span>REGISTRATION</span>
-            <span>LOGIN</span>
+            <span id="registration">REGISTRATION</span>
+            <span id="login">LOGIN</span>
         </div>
-        <input type="text" id="login" placeholder="Login" class="login-field">
+        <input type="text" id="loginField" placeholder="Login" class="login-field">
         <input type="password" id="password" placeholder="Password" class="login-field">
+        <input type="email" id="email" placeholder="Email" class="login-field">
     </div>
+
     <script src="../fixed-element/script.js"></script>
 </body>
 </html>
