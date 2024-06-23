@@ -56,3 +56,7 @@ input.show {
     opacity: 1;
     transform: translateY(0); /* Конечная позиция */
 }
+
+#email {
+    display: none; /* Изначально скрытое поле для email */
+}
