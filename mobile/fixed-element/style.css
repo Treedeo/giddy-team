@@ -13,9 +13,8 @@
     transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Плавная анимация */
     display: flex;
     align-items: flex-start; /* Выравнивание по верхнему краю */
-    justify-content: center;
+    justify-content: flex-start; /* Выравнивание по верхнему краю */
     flex-direction: column;
-    padding-top: 15%; /* Отступ сверху на 15% */
 }
 
 .fixed-element.open {
@@ -32,6 +31,9 @@ input {
     transition: opacity 0.5s ease, transform 0.5s ease; /* Плавная анимация */
     opacity: 0;
     transform: translateY(20px); /* Начальная позиция ниже */
+    align-self: center; /* Выравнивание по центру */
+    position: relative;
+    top: 10px; /* Отступ сверху */
 }
 
 input.show {
