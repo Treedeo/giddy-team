@@ -37,7 +37,7 @@
 }
 
 #registration {
-    color: red; /* Красный цвет для текста REGISTRATION */
+    color: green; /* Зеленый цвет для текста REGISTRATION */
     background: none;
     border: none;
     font: inherit;
