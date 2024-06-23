@@ -23,23 +23,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    fixedElement.addEventListener('click', function(event) {
-        if (event.target !== loginField && event.target !== passwordField && event.target !== registration && event.target !== login) {
-            fixedElement.classList.toggle('open');
-            if (fixedElement.classList.contains('open')) {
-                showFields();
-            } else {
-                hideFields();
-            }
-        }
-    });
-
-    registration.addEventListener('click', function() {
+    registration.addEventListener('click', function(event) {
+        event.stopPropagation(); // Остановить всплытие события
         emailField.style.display = 'block';
         setTimeout(() => {
-            emailField.style.opacity = 1;
-            emailField.style.transform = 'translateY(0)';
+            emailField.classList.add('show');
         }, 0);
+    });
+
+    login.addEventListener('click', function(event) {
+        event.stopPropagation(); // Остановить всплытие события
     });
 
     function showFields() {
@@ -53,14 +46,20 @@ document.addEventListener('DOMContentLoaded', function() {
         loginField.classList.remove('show');
         passwordField.classList.remove('show');
         emailField.style.display = 'none';
-        emailField.style.opacity = 0;
-        emailField.style.transform = 'translateY(20px)';
+        emailField.classList.remove('show');
     }
 
     document.addEventListener('click', function(event) {
         if (!fixedElement.contains(event.target) && fixedElement.classList.contains('open')) {
             fixedElement.classList.remove('open');
             hideFields();
+        }
+    });
+
+    fixedElement.addEventListener('click', function(event) {
+        if (!fixedElement.classList.contains('open')) {
+            fixedElement.classList.add('open');
+            showFields();
         }
     });
 });
