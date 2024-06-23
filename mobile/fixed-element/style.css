@@ -15,7 +15,7 @@
     align-items: flex-start; /* Выравнивание по верхнему краю */
     justify-content: center;
     flex-direction: column;
-    padding-top: 20px; /* Отступ сверху */
+    padding-top: 10px; /* Отступ сверху */
 }
 
 .fixed-element.open {
@@ -32,6 +32,7 @@ input {
     transition: opacity 0.5s ease, transform 0.5s ease; /* Плавная анимация */
     opacity: 0;
     transform: translateY(20px); /* Начальная позиция ниже */
+    align-self: center; /* Выравнивание по центру */
 }
 
 input.show {
