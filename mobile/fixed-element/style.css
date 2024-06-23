@@ -41,3 +41,12 @@ input.show {
     opacity: 1;
     transform: translateY(0); /* Конечная позиция */
 }
+
+.fixed-element-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+    font-size: 3px;
+    color: gray;
+}
