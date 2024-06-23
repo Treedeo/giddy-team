@@ -27,8 +27,14 @@
     justify-content: space-between;
     width: 100%;
     padding: 0 10px;
-    font-size: 1.8vh; /* Уменьшаем размер шрифта на 40% */
+    font-size: 1.8vh; /* Уменьшение размера шрифта на 40% */
     color: gray;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Анимация появления через прозрачность */
+}
+
+.fixed-element.open .fixed-element-header {
+    opacity: 1;
 }
 
 input {
