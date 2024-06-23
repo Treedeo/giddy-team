@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const fixedElement = document.getElementById('fixed-element');
+    const fixedElementHeader = document.querySelector('.fixed-element-header');
     const loginField = document.getElementById('login');
     const passwordField = document.getElementById('password');
     let startY;
@@ -31,11 +32,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function showFields() {
+        fixedElementHeader.style.opacity = 1;
         loginField.classList.add('show');
         passwordField.classList.add('show');
     }
 
     function hideFields() {
+        fixedElementHeader.style.opacity = 0;
         loginField.classList.remove('show');
         passwordField.classList.remove('show');
     }
