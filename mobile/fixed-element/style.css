@@ -28,13 +28,16 @@
     width: 80%; /* Уменьшаем ширину, чтобы отодвинуть от краев */
     margin: 2% auto 0; /* Поднимаем на 17% вверх и центрируем */
     font-size: 1.8vh; /* Уменьшение размера шрифта на 40% */
-    color: gray;
     opacity: 0;
     transition: opacity 0.5s ease-in-out; /* Анимация появления через прозрачность */
 }
 
 .fixed-element.open .fixed-element-header {
     opacity: 1;
+}
+
+#registration {
+    color: red; /* Красный цвет для текста REGISTRATION */
 }
 
 input {
