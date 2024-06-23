@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     const fixedElement = document.getElementById('fixed-element');
     const fixedElementHeader = document.querySelector('.fixed-element-header');
-    const loginField = document.getElementById('login');
+    const loginField = document.getElementById('loginField');
     const passwordField = document.getElementById('password');
     const emailField = document.getElementById('email');
     const registration = document.getElementById('registration');
+    const login = document.getElementById('login');
     let startY;
 
     fixedElement.addEventListener('touchstart', function(event) {
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     fixedElement.addEventListener('click', function(event) {
-        if (event.target !== loginField && event.target !== passwordField && event.target !== registration) {
+        if (event.target !== loginField && event.target !== passwordField && event.target !== registration && event.target !== login) {
             fixedElement.classList.toggle('open');
             if (fixedElement.classList.contains('open')) {
                 showFields();
@@ -55,4 +56,11 @@ document.addEventListener('DOMContentLoaded', function() {
         emailField.style.opacity = 0;
         emailField.style.transform = 'translateY(20px)';
     }
+
+    document.addEventListener('click', function(event) {
+        if (!fixedElement.contains(event.target) && fixedElement.classList.contains('open')) {
+            fixedElement.classList.remove('open');
+            hideFields();
+        }
+    });
 });
