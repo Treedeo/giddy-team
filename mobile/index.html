@@ -3,10 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=main/index.html">
+    <title>Главная</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../fixed-element/style.css">
 </head>
 <body>
-    <p>Redirecting to <a href="main/index.html">main page</a>...</p>
+    <div class="container">
+        <div class="green-container" id="menu-container">
+            <div class="title">GIDDY.TEAM</div>
+            <a href="../ads/index.html" class="button">ОБЪЯВЛЕНИЯ</a>
+            <a href="../discounts/index.html" class="button">СКИДКИ</a>
+            <a href="../about/index.html" class="button">О НАС</a>
+        </div>
+    </div>
+    <div class="fixed-element" id="fixed-element">
+        <input type="text" id="login" placeholder="Login" class="login-field">
+        <input type="password" id="password" placeholder="Password" class="login-field">
+    </div>
+    <script src="../fixed-element/script.js"></script>
 </body>
 </html>
