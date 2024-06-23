@@ -19,12 +19,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    fixedElement.addEventListener('click', function() {
-        fixedElement.classList.toggle('open');
-        if (fixedElement.classList.contains('open')) {
-            showFields();
-        } else {
-            hideFields();
+    fixedElement.addEventListener('click', function(event) {
+        if (event.target !== loginField && event.target !== passwordField) {
+            fixedElement.classList.toggle('open');
+            if (fixedElement.classList.contains('open')) {
+                showFields();
+            } else {
+                hideFields();
+            }
         }
     });
 
