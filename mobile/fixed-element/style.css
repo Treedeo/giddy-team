@@ -34,7 +34,7 @@ input {
     transform: translateY(20px); /* Начальная позиция ниже */
     align-self: center; /* Выравнивание по центру */
     position: relative;
-    top: 15px; /* Отступ сверху */
+    top: 12px; /* Отступ сверху */
 }
 
 input.show {
