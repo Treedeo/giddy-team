@@ -2,7 +2,7 @@
     position: fixed;
     bottom: 0;
     width: 100vw; /* Устанавливаем ширину в 100% от ширины окна просмотра */
-    height: 7vh; /* Начальная высота */
+    height: 5vh; /* Начальная высота */
     background-color: white;
     border: 2px solid gray; /* Серая обводка */
     border-top-left-radius: 15px; /* Закругленные верхние углы */
