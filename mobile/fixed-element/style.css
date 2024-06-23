@@ -1,54 +1,62 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const fixedElement = document.getElementById('fixed-element');
-    const fixedElementHeader = document.querySelector('.fixed-element-header');
-    const loginField = document.getElementById('login');
-    const passwordField = document.getElementById('password');
-    const emailField = document.getElementById('email');
-    const registration = document.getElementById('registration');
-    let startY;
+.fixed-element {
+    position: fixed;
+    bottom: 0;
+    width: 100vw; /* Устанавливаем ширину в 100% от ширины окна просмотра */
+    height: 5vh; /* Начальная высота */
+    background-color: white;
+    border: 2px solid gray; /* Серая обводка */
+    border-top-left-radius: 15px; /* Закругленные верхние углы */
+    border-top-right-radius: 15px; /* Закругленные верхние углы */
+    z-index: 1000; /* Высокий индекс слоя, чтобы элемент был поверх всех разделов */
+    left: 0;
+    right: 0;
+    transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Плавная анимация */
+    display: flex;
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    justify-content: flex-start; /* Выравнивание по верхнему краю */
+    flex-direction: column;
+    padding-top: 5%; /* Отступ сверху */
+}
 
-    fixedElement.addEventListener('touchstart', function(event) {
-        startY = event.touches[0].clientY;
-    });
+.fixed-element.open {
+    height: 50vh; /* Высота при открытии на половину экрана */
+}
 
-    fixedElement.addEventListener('touchmove', function(event) {
-        const touchY = event.touches[0].clientY;
-        if (startY - touchY > 50) { // Проводим пальцем вверх
-            fixedElement.classList.add('open');
-            showFields();
-        } else if (touchY - startY > 50) { // Проводим пальцем вниз
-            fixedElement.classList.remove('open');
-            hideFields();
-        }
-    });
+.fixed-element-header {
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* Уменьшаем ширину, чтобы отодвинуть от краев */
+    margin: 2% auto 0; /* Поднимаем на 17% вверх и центрируем */
+    font-size: 1.8vh; /* Уменьшение размера шрифта на 40% */
+    color: gray;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Анимация появления через прозрачность */
+}
 
-    fixedElement.addEventListener('click', function(event) {
-        if (event.target !== loginField && event.target !== passwordField && event.target !== registration) {
-            fixedElement.classList.toggle('open');
-            if (fixedElement.classList.contains('open')) {
-                showFields();
-            } else {
-                hideFields();
-            }
-        }
-    });
+.fixed-element.open .fixed-element-header {
+    opacity: 1;
+}
 
-    registration.addEventListener('click', function() {
-        emailField.style.display = 'block';
-        emailField.classList.add('show');
-    });
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px auto; /* Центрирование по горизонтали */
+    border: 2px solid gray; /* Серая обводка */
+    border-radius: 15px; /* Скругленные углы */
+    font-size: 16px;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Плавная анимация */
+    opacity: 0;
+    transform: translateY(20px); /* Начальная позиция ниже */
+    align-self: center; /* Выравнивание по центру */
+    position: relative;
+    top: 5%; /* Отступ сверху */
+}
 
-    function showFields() {
-        fixedElementHeader.style.opacity = 1;
-        loginField.classList.add('show');
-        passwordField.classList.add('show');
-    }
+input.show {
+    opacity: 1;
+    transform: translateY(0); /* Конечная позиция */
+}
 
-    function hideFields() {
-        fixedElementHeader.style.opacity = 0;
-        loginField.classList.remove('show');
-        passwordField.classList.remove('show');
-        emailField.style.display = 'none';
-        emailField.classList.remove('show');
-    }
-});
+#email {
+    display: none; /* Изначально скрытое поле для email */
+}
