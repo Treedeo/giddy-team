@@ -10,9 +10,30 @@
     z-index: 1000; /* Высокий индекс слоя, чтобы элемент был поверх всех разделов */
     left: 0;
     right: 0;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Плавная анимация */
+    transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Плавная анимация */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .fixed-element.open {
     height: 50vh; /* Высота при открытии на половину экрана */
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid gray; /* Серая обводка */
+    border-radius: 15px; /* Скругленные углы */
+    font-size: 16px;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Плавная анимация */
+    opacity: 0;
+    transform: translateY(20px); /* Начальная позиция ниже */
+}
+
+input.show {
+    opacity: 1;
+    transform: translateY(0); /* Конечная позиция */
 }
