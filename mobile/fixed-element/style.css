@@ -13,9 +13,9 @@
     transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Плавная анимация */
     display: flex;
     align-items: flex-start; /* Выравнивание по верхнему краю */
-    justify-content: flex-start; /* Выравнивание по верхнему краю */
+    justify-content: center;
     flex-direction: column;
-    padding-top: 10px; /* Отступ сверху */
+    padding-top: 15%; /* Отступ сверху на 15% */
 }
 
 .fixed-element.open {
