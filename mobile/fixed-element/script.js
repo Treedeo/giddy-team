@@ -20,8 +20,12 @@ document.addEventListener('DOMContentLoaded', function() {
         fixedElementHeader.style.opacity = 0;
         loginField.classList.remove('show');
         passwordField.classList.remove('show');
-        emailField.style.display = 'none';
-        emailField.classList.remove('show');
+        emailField.classList.add('hide');
+        setTimeout(() => {
+            emailField.style.display = 'none';
+            emailField.classList.remove('show');
+            emailField.classList.remove('hide');
+        }, 500); // Время должно соответствовать времени анимации в CSS
     }
 
     fixedElement.addEventListener('touchstart', function(event) {
@@ -54,8 +58,12 @@ document.addEventListener('DOMContentLoaded', function() {
     login.addEventListener('click', function(event) {
         event.stopPropagation(); // Остановить всплытие события
         console.log('Login button clicked'); // Debugging
-        emailField.style.display = 'none';
-        emailField.classList.remove('show');
+        emailField.classList.add('hide');
+        setTimeout(() => {
+            emailField.style.display = 'none';
+            emailField.classList.remove('show');
+            emailField.classList.remove('hide');
+        }, 500); // Время должно соответствовать времени анимации в CSS
     });
 
     document.addEventListener('click', function(event) {
